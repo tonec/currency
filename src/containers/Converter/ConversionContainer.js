@@ -1,10 +1,10 @@
 import React, { PropTypes, Component } from 'react'
 import { RefreshControl, ScrollView, Text, View, Platform } from 'react-native'
 import { connect } from 'react-redux'
-
+import { iconsMap } from '../../utils/icons'
 import ProgressBar from '../../components/ProgressBar/ProgressBar'
+
 import styles from './styles'
-import { iconsMap } from '../../utils/AppIcons'
 
 class ConversionContainer extends Component {
 

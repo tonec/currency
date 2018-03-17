@@ -4,7 +4,7 @@ import { Navigation } from 'react-native-navigation'
 import { Provider } from 'react-redux'
 import { registerScreens } from './screens'
 
-import { iconsMap, iconsLoaded } from './utils/AppIcons'
+import { iconsMap, iconsLoaded } from './utils/icons'
 import configureStore from './redux/configureStore'
 
 const store = configureStore()
