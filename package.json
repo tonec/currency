@@ -1,0 +1,54 @@
+{
+  "name": "currency",
+  "version": "2.2.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "lint": "esw index.ios.js index.android.js src utils",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.16.6",
+    "moment": "^2.16.0",
+    "numeral": "^1.5.3",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0",
+    "react-native-config": "^0.3.1",
+    "react-native-linear-gradient": "^2.0.0",
+    "react-native-navigation": "1.1.84",
+    "react-native-scrollable-tab-view": "^0.7.4",
+    "react-native-swiper": "^1.5.4",
+    "react-native-vector-icons": "^4.2.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "jest": {
+    "preset": "jest-react-native"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "16.0.0",
+    "babel-preset-react-native": "1.9.0",
+    "eslint": "^4.18.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "16.0.1",
+    "jest-react-native": "16.0.0",
+    "react-native-dotenv": "0.0.2",
+    "react-test-renderer": "15.3.2",
+    "redux-immutable-state-invariant": "^2.0.0",
+    "redux-logger": "^3.0.6"
+  },
+  "author": "Tony Coop <tony@thewholeworldwindow.co.uk>",
+  "license": "MIT",
+  "homepage": "www.thewholeworldwindow.co.uk"
+}
