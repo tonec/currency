@@ -8,7 +8,7 @@ export default function clientMiddleware (helpers) {
 
     const { promise, types, ...rest } = action
 
-    // Is pain object
+    // Is plain action object
     if (!promise) {
       return next(action)
     }
