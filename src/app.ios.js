@@ -12,6 +12,7 @@ const store = configureStore()
 registerScreens(store, Provider)
 
 const navigatorStyle = {
+  navBarBackgroundColor: '#0a0a0a',
   navBarTranslucent: true,
   drawUnderNavBar: true,
   navBarTextColor: 'white',
@@ -52,7 +53,7 @@ class App extends Component {
       tabsStyle: {
         tabBarButtonColor: 'white',
         tabBarSelectedButtonColor: 'white',
-        tabBarBackgroundColor: 'black'
+        tabBarBackgroundColor: '#0a0a0a'
       }
     })
   }
