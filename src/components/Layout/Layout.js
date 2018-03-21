@@ -40,7 +40,7 @@ class Layout extends Component {
 
   onNavigatorEvent = (event) => {
     if (event.type === 'NavBarButtonPress') {
-      if (event.id === 'search') {
+      if (event.id === 'add') {
         let rightButtons = []
 
         if (Platform.OS === 'ios') {
@@ -52,8 +52,8 @@ class Layout extends Component {
         }
 
         this.props.navigator.showModal({
-          screen: 'currency.Search',
-          title: 'Search',
+          screen: 'currency.Currencies',
+          title: 'Choose currencies',
           navigatorButtons: {
             rightButtons
           }
