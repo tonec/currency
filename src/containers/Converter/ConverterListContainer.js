@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { fetchRates } from '../../redux/modules/rates/actions'
 import { Layout } from '../../components'
 import ConverterList from './ConverterList'
 
 class ConverterListContainer extends Component {
 
   static propTypes = {
-    navigator: PropTypes.object.isRequired
+    navigator: PropTypes.object.isRequired,
+    fetchRates: PropTypes.func.isRequired
   }
 
   constructor (props) {
@@ -19,6 +21,10 @@ class ConverterListContainer extends Component {
         { name: 'GBP', value: 0 }
       ]
     }
+  }
+
+  componentDidMount () {
+    this.props.fetchRates()
   }
 
   render () {
@@ -36,4 +42,4 @@ function mapStateToProps (state, ownProps) {
   return {}
 }
 
-export default connect(mapStateToProps)(ConverterListContainer)
+export default connect(mapStateToProps, { fetchRates })(ConverterListContainer)

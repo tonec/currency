@@ -1,3 +1,4 @@
+import merge from 'lodash/merge'
 import * as types from './actions'
 
 export const initialState = {
@@ -8,13 +9,18 @@ export default function reducer (state = initialState, action = {}) {
   switch (action.type) {
 
     case types.FETCH:
-      return { ...state, fetching: true }
+      return merge({}, state, { fetching: true })
 
     case types.FETCH_SUCCESS:
-      return { ...state, fetching: false }
+      return merge(
+        {},
+        state,
+        { fetching: false },
+        { visible: action.response.result }
+      )
 
     case types.FETCH_FAIL:
-      return { ...state, fetching: false }
+      return merge({}, state, { fetching: false })
 
     default:
       return state

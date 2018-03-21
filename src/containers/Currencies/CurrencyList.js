@@ -1,0 +1,39 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { View, FlatList } from 'react-native'
+import CurrencyListItem from './CurrencyListItem'
+
+import styles from './styles'
+
+class CurrencyList extends Component {
+
+  static propTypes = {
+    rates: PropTypes.array.isRequired
+  }
+
+  keyExtractor = (item, index) => item.id
+
+  renderItem = ({ item }) => (
+    <CurrencyListItem
+      id={item.id}
+      onPressItem={this._onPressItem}
+      name={item.code}
+    />
+  )
+
+  render () {
+    return (
+      <View style={styles.container}>
+        <View style={styles.list}>
+          <FlatList
+            data={this.props.rates}
+            keyExtractor={this.keyExtractor}
+            renderItem={this.renderItem}
+          />
+        </View>
+      </View>
+    )
+  }
+}
+
+export default CurrencyList

@@ -1,30 +1,30 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Text } from 'react-native'
 import { connect } from 'react-redux'
-import { fetchCurrencies } from '../../redux/modules/currencies/actions'
+import { getRates } from '../../redux/modules/rates/selectors'
+import CurrencyList from './CurrencyList'
 
 class CurrencyListContainer extends Component {
 
   static propTypes = {
-    fetchCurrencies: PropTypes.func.isRequired
+    rates: PropTypes.array
   }
 
-  componentDidMount () {
-    this.props.fetchCurrencies()
+  static defaultProps = {
+    rates: []
   }
 
   render () {
     return (
-      <Text>dadjdf</Text>
+      <CurrencyList rates={this.props.rates} />
     )
   }
 }
 
 const mapState = state => {
   return {
-    currencies: {}
+    rates: getRates(state)
   }
 }
 
-export default connect(mapState, { fetchCurrencies })(CurrencyListContainer)
+export default connect(mapState)(CurrencyListContainer)
