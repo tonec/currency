@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Layout } from '../../components'
-import CurrencyList from './CurrencyList'
+import ConverterList from './ConverterList'
 
-class CurrencyListContainer extends Component {
+class ConverterListContainer extends Component {
 
   static propTypes = {
     navigator: PropTypes.object.isRequired
@@ -15,8 +15,8 @@ class CurrencyListContainer extends Component {
 
     this.state = {
       currencies: [
-        { name: 'USD' },
-        { name: 'GBP' }
+        { name: 'USD', value: 0 },
+        { name: 'GBP', value: 0 }
       ]
     }
   }
@@ -26,7 +26,7 @@ class CurrencyListContainer extends Component {
 
     return (
       <Layout navigator={navigator}>
-        <CurrencyList currencies={this.state.currencies} />
+        <ConverterList currencies={this.state.currencies} />
       </Layout>
     )
   }
@@ -36,4 +36,4 @@ function mapStateToProps (state, ownProps) {
   return {}
 }
 
-export default connect(mapStateToProps)(CurrencyListContainer)
+export default connect(mapStateToProps)(ConverterListContainer)

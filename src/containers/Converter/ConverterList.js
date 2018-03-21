@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { View, FlatList } from 'react-native'
-import CurrencyListItem from './CurrencyListItem'
+import ConverterListItem from './ConverterListItem'
 
 import styles from './styles'
 
-class CurrencyList extends Component {
+class ConverterList extends Component {
 
   static propTypes = {
     currencies: PropTypes.array.isRequired
@@ -14,7 +14,7 @@ class CurrencyList extends Component {
   keyExtractor = (item, index) => item.name
 
   renderItem = ({ item }) => (
-    <CurrencyListItem
+    <ConverterListItem
       id={item.name}
       onPressItem={this._onPressItem}
       name={item.name}
@@ -36,4 +36,4 @@ class CurrencyList extends Component {
   }
 }
 
-export default CurrencyList
+export default ConverterList

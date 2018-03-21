@@ -1,7 +1,7 @@
 import { Navigation } from 'react-native-navigation'
 
-import CurrencyListContainer from './containers/Converter/CurrencyListContainer'
+import ConverterListContainer from './containers/Converter/ConverterListContainer'
 
 export function registerScreens (store, Provider) {
-  Navigation.registerComponent('currency.Conversion', () => CurrencyListContainer, store, Provider)
+  Navigation.registerComponent('currency.Conversion', () => ConverterListContainer, store, Provider)
 }

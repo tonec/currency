@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
 
   listItemText: {
     color: '#fff'
+  },
+
+  input: {
+    color: '#fff',
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1
   }
 })
 
