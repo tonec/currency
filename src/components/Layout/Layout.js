@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import { RefreshControl, ScrollView, View, Platform } from 'react-native'
+import { RefreshControl, ScrollView, View } from 'react-native'
 import { iconsMap } from '../../utils/icons'
 import { ProgressBar } from '../../components'
 
@@ -39,26 +39,24 @@ class Layout extends Component {
   }
 
   onNavigatorEvent = (event) => {
-    if (event.type === 'NavBarButtonPress') {
-      if (event.id === 'add') {
-        let rightButtons = []
+    const { navigator } = this.props
 
-        if (Platform.OS === 'ios') {
-          rightButtons = [{
+    if (event.type === 'NavBarButtonPress' && event.id === 'add') {
+      navigator.showModal({
+        screen: 'currency.Currencies',
+        title: 'Choose currencies',
+        navigatorButtons: {
+          rightButtons: [{
             id: 'close',
             title: 'Close',
             icon: iconsMap['ios-close']
           }]
         }
+      })
+    }
 
-        this.props.navigator.showModal({
-          screen: 'currency.Currencies',
-          title: 'Choose currencies',
-          navigatorButtons: {
-            rightButtons
-          }
-        })
-      }
+    if (event.type === 'NavBarButtonPress' && event.id === 'close') {
+      navigator.dismissModal()
     }
   }
 

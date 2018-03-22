@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { View, Text, TouchableOpacity } from 'react-native'
 import { isNumber } from '../../utils'
-import { View, Text } from 'react-native'
 
 import styles from './styles'
 
@@ -28,7 +28,9 @@ class CurrencyListItem extends Component {
   render () {
     return (
       <View style={styles.listItem}>
-        <View><Text style={styles.listItemText}>{this.props.name}</Text></View>
+        <TouchableOpacity>
+          <Text style={styles.listItemText}>{this.props.name}</Text>
+        </TouchableOpacity>
       </View>
     )
   }

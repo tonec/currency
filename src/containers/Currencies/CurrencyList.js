@@ -17,7 +17,7 @@ class CurrencyList extends Component {
     <CurrencyListItem
       id={item.id}
       onPressItem={this._onPressItem}
-      name={item.code}
+      name={item.name}
     />
   )
 

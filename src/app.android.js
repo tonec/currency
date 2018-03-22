@@ -28,8 +28,8 @@ const navigatorStyle = {
 
 Navigation.startSingleScreenApp({
   screen: {
-    screen: 'movieapp.Movies',
-    title: 'Movies',
+    title: 'Converter',
+    screen: 'currency.Conversion',
     navigatorStyle,
     leftButtons: [
       {
@@ -39,7 +39,7 @@ Navigation.startSingleScreenApp({
   },
   drawer: {
     left: {
-      screen: 'movieapp.Drawer'
+      screen: 'currency.Currencies'
     }
   }
 })
