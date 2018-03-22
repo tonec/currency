@@ -1,8 +1,6 @@
 export default function clientMiddleware (helpers) {
   return ({ dispatch, getState }) => next => action => {
 
-    console.log('middleware')
-
     // Is thunk
     if (typeof action === 'function') {
       return action(dispatch, getState)

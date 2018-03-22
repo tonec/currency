@@ -22,7 +22,7 @@ class ConverterListContainer extends Component {
     super(props, context)
 
     this.state = {
-      selectesRates: this.props.selectesRates
+      conversionData: {}
     }
   }
 
@@ -31,20 +31,51 @@ class ConverterListContainer extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    if (nextProps.selectesRates !== this.props.selectesRates) {
-      this.setState((state) => ({
-        ...state,
-        selectesRates: state.selectesRates.concat(nextProps.selectesRates)
-      }))
-    }
+    this.setState(state => ({
+      ...state,
+      conversionData: this.generateValuesState(state.selectesRates, nextProps.selectesRates)
+    }))
+  }
+
+  generateValuesState (currentRates, nextRates) {
+    let result = {}
+
+    nextRates.forEach(rate => {
+      result[rate.id] = {
+        rate: rate.value,
+        rounding: rate.rounding,
+        decimal_digits: rate.decimal_digits,
+        inputValue: 0
+      }
+    })
+
+    return result
+  }
+
+  handleOnValueInputChange = (id, value) => {
+    this.setState(state => ({
+      ...state,
+      conversionData: {
+        ...state.conversionData,
+        [id]: {
+          ...state.conversionData[id],
+          inputValue: value
+        }
+      }
+    }))
   }
 
   render () {
-    const { navigator } = this.props
+    const { navigator, selectesRates } = this.props
+    const { conversionData } = this.state
 
     return (
       <Layout navigator={navigator}>
-        <ConverterList currencies={this.state.selectesRates} />
+        <ConverterList
+          currencies={selectesRates}
+          conversionData={conversionData}
+          handleOnValueInputChange={this.handleOnValueInputChange}
+        />
       </Layout>
     )
   }

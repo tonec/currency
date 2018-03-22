@@ -8,20 +8,38 @@ import styles from './styles'
 class ConverterListItem extends Component {
 
   static propTypes = {
-    name: PropTypes.string.isRequired
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired,
+    handleOnValueInputChange: PropTypes.func.isRequired
   }
 
   constructor (props, context) {
     super(props, context)
 
     this.state = {
-      value: ''
+      tempValue: this.props.value
     }
   }
 
+  handleOnInputFocus = () => {
+    this.setState({ tempValue: '' })
+  }
+
   handleOnInputChange = value => {
-    if (isNumber(value) || value.length === '') {
-      this.setState({ value })
+    if (isNumber(value) || value === '') {
+      this.setState({ tempValue: value })
+    }
+  }
+
+  handleOnInputBlur = () => {
+    const { id, value, handleOnValueInputChange } = this.props
+    const { tempValue } = this.state
+
+    if (tempValue === '') {
+      this.setState({ tempValue: value })
+    } else {
+      handleOnValueInputChange(id, parseFloat(tempValue))
     }
   }
 
@@ -32,8 +50,10 @@ class ConverterListItem extends Component {
         <TextInput
           style={styles.input}
           keyboardType="numeric"
-          value={this.state.value}
+          value={this.state.tempValue.toString()}
+          onFocus={this.handleOnInputFocus}
           onChangeText={this.handleOnInputChange}
+          onBlur={this.handleOnInputBlur}
         />
       </View>
     )
