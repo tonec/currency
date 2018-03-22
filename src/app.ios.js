@@ -2,14 +2,13 @@
 import React, { Component } from 'react'
 import { Navigation } from 'react-native-navigation'
 import { Provider } from 'react-redux'
+import { persistStore } from 'redux-persist'
 import { registerScreens } from './screens'
 
 import { iconsMap, iconsLoaded } from './utils/icons'
 import configureStore from './redux/configureStore'
 
 const store = configureStore()
-
-registerScreens(store, Provider)
 
 const navigatorStyle = {
   navBarBackgroundColor: '#0a0a0a',
@@ -30,31 +29,35 @@ class App extends Component {
   }
 
   startApp () {
-    Navigation.startTabBasedApp({
-      tabs: [
-        {
-          label: 'Convert',
-          screen: 'currency.Conversion',
-          icon: iconsMap['ios-film-outline'],
-          selectedIcon: iconsMap['ios-film'],
-          title: 'Converter',
-          navigatorStyle,
-          navigatorButtons: {
-            rightButtons: [
-              {
-                title: 'Add',
-                id: 'add',
-                icon: iconsMap['ios-add']
-              }
-            ]
+    persistStore(store, null, () => {
+      registerScreens(store, Provider)
+
+      Navigation.startTabBasedApp({
+        tabs: [
+          {
+            label: 'Convert',
+            screen: 'currency.Conversion',
+            icon: iconsMap['ios-film-outline'],
+            selectedIcon: iconsMap['ios-film'],
+            title: 'Converter',
+            navigatorStyle,
+            navigatorButtons: {
+              rightButtons: [
+                {
+                  title: 'Add',
+                  id: 'add',
+                  icon: iconsMap['ios-add']
+                }
+              ]
+            }
           }
+        ],
+        tabsStyle: {
+          tabBarButtonColor: 'white',
+          tabBarSelectedButtonColor: 'white',
+          tabBarBackgroundColor: '#0a0a0a'
         }
-      ],
-      tabsStyle: {
-        tabBarButtonColor: 'white',
-        tabBarSelectedButtonColor: 'white',
-        tabBarBackgroundColor: '#0a0a0a'
-      }
+      })
     })
   }
 }
