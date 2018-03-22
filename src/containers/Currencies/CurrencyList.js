@@ -8,16 +8,27 @@ import styles from './styles'
 class CurrencyList extends Component {
 
   static propTypes = {
-    rates: PropTypes.array.isRequired
+    rates: PropTypes.array,
+    selected: PropTypes.array,
+    onCurrencyListChange: PropTypes.func.isRequired
   }
+
+  static defaultProps = {
+    rates: [],
+    selected: []
+  }
+
+  isSelected = (id) => this.props.selected.includes(id)
 
   keyExtractor = (item, index) => item.id
 
   renderItem = ({ item }) => (
     <CurrencyListItem
       id={item.id}
-      onPressItem={this._onPressItem}
       name={item.name}
+      isSelected={this.isSelected(item.id)}
+      onPressItem={this._onPressItem}
+      onCurrencyListChange={this.props.onCurrencyListChange}
     />
   )
 

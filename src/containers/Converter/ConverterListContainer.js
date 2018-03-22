@@ -2,24 +2,27 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fetchRates } from '../../redux/modules/rates/actions'
+import { getSelectedRates } from '../../redux/modules/rates/selectors'
 import { Layout } from '../../components'
 import ConverterList from './ConverterList'
 
 class ConverterListContainer extends Component {
 
   static propTypes = {
+    selectesRates: PropTypes.array,
     navigator: PropTypes.object.isRequired,
     fetchRates: PropTypes.func.isRequired
   }
 
-  constructor (props) {
-    super(props)
+  static defaultProps = {
+    selectesRates: []
+  }
+
+  constructor (props, context) {
+    super(props, context)
 
     this.state = {
-      currencies: [
-        { name: 'USD', value: 0 },
-        { name: 'GBP', value: 0 }
-      ]
+      selectesRates: this.props.selectesRates
     }
   }
 
@@ -27,19 +30,30 @@ class ConverterListContainer extends Component {
     this.props.fetchRates()
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.selectesRates !== this.props.selectesRates) {
+      this.setState((state) => ({
+        ...state,
+        selectesRates: state.selectesRates.concat(nextProps.selectesRates)
+      }))
+    }
+  }
+
   render () {
     const { navigator } = this.props
 
     return (
       <Layout navigator={navigator}>
-        <ConverterList currencies={this.state.currencies} />
+        <ConverterList currencies={this.state.selectesRates} />
       </Layout>
     )
   }
 }
 
 function mapStateToProps (state, ownProps) {
-  return {}
+  return {
+    selectesRates: getSelectedRates(state)
+  }
 }
 
 export default connect(mapStateToProps, { fetchRates })(ConverterListContainer)

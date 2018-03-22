@@ -1,35 +1,32 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { View, Text, TouchableOpacity } from 'react-native'
-import { isNumber } from '../../utils'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 import styles from './styles'
 
 class CurrencyListItem extends Component {
 
   static propTypes = {
-    name: PropTypes.string.isRequired
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    onCurrencyListChange: PropTypes.func.isRequired
   }
 
-  constructor (props, context) {
-    super(props, context)
-
-    this.state = {
-      value: ''
-    }
-  }
-
-  handleOnInputChange = value => {
-    if (isNumber(value) || value.length === '') {
-      this.setState({ value })
-    }
+  handleOnPress = event => {
+    const { id, onCurrencyListChange } = this.props
+    onCurrencyListChange(id)
   }
 
   render () {
+    const { name, isSelected } = this.props
+
     return (
       <View style={styles.listItem}>
-        <TouchableOpacity>
-          <Text style={styles.listItemText}>{this.props.name}</Text>
+        <TouchableOpacity onPress={this.handleOnPress}>
+          <Icon name={isSelected ? 'md-checkbox-outline' : 'md-square-outline'} size={30} color="#fff" />
+          <Text style={styles.listItemText}>{name}</Text>
         </TouchableOpacity>
       </View>
     )

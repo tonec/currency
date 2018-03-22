@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import { RefreshControl, ScrollView, View } from 'react-native'
+import { ScrollView, View } from 'react-native'
 import { iconsMap } from '../../utils/icons'
 import { ProgressBar } from '../../components'
 
@@ -61,24 +61,14 @@ class Layout extends Component {
   }
 
   render () {
-    const { isLoading, isRefreshing } = this.state
+    const { isLoading } = this.state
 
     if (isLoading) {
       return <View style={styles.progressBar}><ProgressBar /></View>
     }
 
     return (
-      <ScrollView
-        style={styles.container}
-        refreshControl={
-          <RefreshControl
-            {...this.refConColors}
-            title="loading..."
-            refreshing={isRefreshing}
-            onRefresh={this.onRefresh}
-          />
-        }
-      >
+      <ScrollView style={styles.container} >
         {this.props.children}
       </ScrollView>
     )
