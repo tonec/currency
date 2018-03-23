@@ -34,8 +34,7 @@ class ConverterListContainer extends Component {
   }
 
   handleOnValueInputChange = (id, rate, volume) => {
-    console.log(id, volume, rate)
-    // Base is the currency item being updated
+    console.log(id, rate, volume)
     this.setState(state => ({
       ...state,
       baseId: id,
@@ -47,6 +46,8 @@ class ConverterListContainer extends Component {
   render () {
     const { navigator, selectesRates } = this.props
     const { baseId, baseRate, baseVolume } = this.state
+
+    console.log('state', baseId, baseRate, baseVolume)
 
     return (
       <Layout navigator={navigator}>

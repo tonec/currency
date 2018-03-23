@@ -23,6 +23,14 @@ class ConverterListItem extends Component {
     }
   }
 
+  componentWillReceiveProps (nextProps) {
+    this.setState({ tempValue: nextProps.value })
+  }
+
+  handleOnInputFocus = () => {
+    this.setState({ tempValue: '' })
+  }
+
   handleOnInputChange = volume => {
     const { id, rate, handleOnValueInputChange } = this.props
 
@@ -31,8 +39,18 @@ class ConverterListItem extends Component {
     }
   }
 
+  handleOnInputBlur = () => {
+    const { value } = this.props
+    const { tempValue } = this.state
+
+    if (tempValue === '') {
+      this.setState({ tempValue: value })
+    }
+  }
+
   render () {
-    const { name, value } = this.props
+    const { name } = this.props
+    const { tempValue } = this.state
 
     return (
       <View style={styles.listItem}>
@@ -40,9 +58,10 @@ class ConverterListItem extends Component {
         <TextInput
           style={styles.input}
           keyboardType="numeric"
-          value={value.toString()}
+          value={tempValue.toString()}
           onFocus={this.handleOnInputFocus}
           onChangeText={this.handleOnInputChange}
+          onBlur={this.handleOnInputBlur}
         />
       </View>
     )
