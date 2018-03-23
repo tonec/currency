@@ -25,16 +25,16 @@ class ConverterList extends Component {
     const { baseId, baseRate, baseVolume, handleOnValueInputChange } = this.props
 
     const crossRate = item.rate / baseRate
-
-    console.log('check', item.id === baseId)
-    console.log('baseVolume', baseVolume)
+    const value = (item.id === baseId) ? baseVolume : crossRate * baseVolume
 
     return (
       <ConverterListItem
         id={item.id}
         name={item.name}
         rate={item.rate}
-        value={(item.id === baseId) ? baseVolume : crossRate * baseVolume}
+        value={value.toFixed(item.decimal_digit)}
+        rounding={item.rounding}
+        symbolNative={item.symbol_native}
         onPressItem={this._onPressItem}
         handleOnValueInputChange={handleOnValueInputChange}
       />
