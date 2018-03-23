@@ -11,7 +11,7 @@ class ConverterListItem extends Component {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     rate: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
+    value: PropTypes.string.isRequired,
     handleOnValueInputChange: PropTypes.func.isRequired
   }
 
@@ -58,7 +58,7 @@ class ConverterListItem extends Component {
         <TextInput
           style={styles.input}
           keyboardType="numeric"
-          value={tempValue.toString()}
+          value={tempValue}
           onFocus={this.handleOnInputFocus}
           onChangeText={this.handleOnInputChange}
           onBlur={this.handleOnInputBlur}
