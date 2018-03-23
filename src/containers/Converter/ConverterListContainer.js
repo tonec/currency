@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import update from 'react-addons-update'
 import { fetchRates } from '../../redux/modules/rates/actions'
 import { getSelectedRates } from '../../redux/modules/rates/selectors'
 import { Layout } from '../../components'
@@ -22,7 +23,9 @@ class ConverterListContainer extends Component {
     super(props, context)
 
     this.state = {
-      conversionData: {}
+      baseId: null,
+      baseRate: 1,
+      baseVolume: 0
     }
   }
 
@@ -30,50 +33,28 @@ class ConverterListContainer extends Component {
     this.props.fetchRates()
   }
 
-  componentWillReceiveProps (nextProps) {
+  handleOnValueInputChange = (id, rate, volume) => {
+    console.log(id, volume, rate)
+    // Base is the currency item being updated
     this.setState(state => ({
       ...state,
-      conversionData: this.generateValuesState(state.selectesRates, nextProps.selectesRates)
-    }))
-  }
-
-  generateValuesState (currentRates, nextRates) {
-    let result = {}
-
-    nextRates.forEach(rate => {
-      result[rate.id] = {
-        rate: rate.value,
-        rounding: rate.rounding,
-        decimal_digits: rate.decimal_digits,
-        inputValue: 0
-      }
-    })
-
-    return result
-  }
-
-  handleOnValueInputChange = (id, value) => {
-    this.setState(state => ({
-      ...state,
-      conversionData: {
-        ...state.conversionData,
-        [id]: {
-          ...state.conversionData[id],
-          inputValue: value
-        }
-      }
+      baseId: id,
+      baseRate: rate,
+      baseVolume: volume
     }))
   }
 
   render () {
     const { navigator, selectesRates } = this.props
-    const { conversionData } = this.state
+    const { baseId, baseRate, baseVolume } = this.state
 
     return (
       <Layout navigator={navigator}>
         <ConverterList
           currencies={selectesRates}
-          conversionData={conversionData}
+          baseId={baseId}
+          baseRate={baseRate}
+          baseVolume={baseVolume}
           handleOnValueInputChange={this.handleOnValueInputChange}
         />
       </Layout>

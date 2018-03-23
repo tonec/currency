@@ -10,6 +10,7 @@ class ConverterListItem extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
+    rate: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
     handleOnValueInputChange: PropTypes.func.isRequired
   }
@@ -22,38 +23,26 @@ class ConverterListItem extends Component {
     }
   }
 
-  handleOnInputFocus = () => {
-    this.setState({ tempValue: '' })
-  }
+  handleOnInputChange = volume => {
+    const { id, rate, handleOnValueInputChange } = this.props
 
-  handleOnInputChange = value => {
-    if (isNumber(value) || value === '') {
-      this.setState({ tempValue: value })
-    }
-  }
-
-  handleOnInputBlur = () => {
-    const { id, value, handleOnValueInputChange } = this.props
-    const { tempValue } = this.state
-
-    if (tempValue === '') {
-      this.setState({ tempValue: value })
-    } else {
-      handleOnValueInputChange(id, parseFloat(tempValue))
+    if (isNumber(volume)) {
+      handleOnValueInputChange(id, rate, parseFloat(volume))
     }
   }
 
   render () {
+    const { name, value } = this.props
+
     return (
       <View style={styles.listItem}>
-        <Text style={styles.listItemText}>{this.props.name}</Text>
+        <Text style={styles.listItemText}>{name}</Text>
         <TextInput
           style={styles.input}
           keyboardType="numeric"
-          value={this.state.tempValue.toString()}
+          value={value.toString()}
           onFocus={this.handleOnInputFocus}
           onChangeText={this.handleOnInputChange}
-          onBlur={this.handleOnInputBlur}
         />
       </View>
     )

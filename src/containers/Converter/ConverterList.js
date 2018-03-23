@@ -8,21 +8,30 @@ import styles from './styles'
 class ConverterList extends Component {
 
   static propTypes = {
+    baseId: PropTypes.string,
+    baseRate: PropTypes.number.isRequired,
+    baseVolume: PropTypes.number.isRequired,
     currencies: PropTypes.array.isRequired,
-    conversionData: PropTypes.object.isRequired,
     handleOnValueInputChange: PropTypes.func.isRequired
+  }
+
+  static defaultProps = {
+    baseId: null
   }
 
   keyExtractor = (item, index) => item.id
 
   renderItem = ({ item }) => {
-    const { conversionData, handleOnValueInputChange } = this.props
+    const { baseId, baseRate, baseVolume, handleOnValueInputChange } = this.props
+
+    const crossRate = item.rate / baseRate
 
     return (
       <ConverterListItem
         id={item.id}
         name={item.name}
-        value={conversionData[item.id] ? conversionData[item.id].inputValue : 0}
+        rate={item.rate}
+        value={(item.id === baseId) ? baseVolume : crossRate * baseVolume}
         onPressItem={this._onPressItem}
         handleOnValueInputChange={handleOnValueInputChange}
       />
