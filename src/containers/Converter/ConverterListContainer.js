@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import update from 'react-addons-update'
 import { fetchRates } from '../../redux/modules/rates/actions'
 import { getSelectedRates } from '../../redux/modules/rates/selectors'
 import { Layout } from '../../components'
@@ -34,7 +33,6 @@ class ConverterListContainer extends Component {
   }
 
   handleOnValueInputChange = (id, rate, volume) => {
-    console.log(id, rate, volume)
     this.setState(state => ({
       ...state,
       baseId: id,
@@ -46,8 +44,6 @@ class ConverterListContainer extends Component {
   render () {
     const { navigator, selectesRates } = this.props
     const { baseId, baseRate, baseVolume } = this.state
-
-    console.log('state', baseId, baseRate, baseVolume)
 
     return (
       <Layout navigator={navigator}>
