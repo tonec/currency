@@ -55,24 +55,35 @@ class ConverterListItem extends Component {
     const { name, currencyCode, countryCode } = this.props
     const { tempValue } = this.state
 
-    console.log('countryCode', countryCode)
-
     return (
       <View style={styles.listItem}>
-        <Image
-          width={50}
-          height={30}
-          source={flags[countryCode.toLowerCase()]}
-        />
-        <Text style={styles.listItemText}>{name} ({currencyCode})</Text>
-        <TextInput
-          style={styles.input}
-          keyboardType="numeric"
-          value={tempValue}
-          onFocus={this.handleOnInputFocus}
-          onChangeText={this.handleOnInputChange}
-          onBlur={this.handleOnInputBlur}
-        />
+        <View style={styles.currencyTitle}>
+          <Text style={styles.listItemText}>{name}</Text>
+        </View>
+        <View style={styles.currencyContainer}>
+          <View style={styles.listItemElementFlag}>
+            <Image
+              style={styles.flag}
+              width={40}
+              height={40}
+              resizeMode={'contain'}
+              source={flags[countryCode.toLowerCase()]}
+            />
+          </View>
+          <View style={styles.listItemElementInput}>
+            <TextInput
+              style={styles.input}
+              keyboardType="numeric"
+              value={tempValue}
+              onFocus={this.handleOnInputFocus}
+              onChangeText={this.handleOnInputChange}
+              onBlur={this.handleOnInputBlur}
+            />
+          </View>
+          <View style={styles.listItemElementText}>
+            <Text style={styles.listItemText}>{currencyCode}</Text>
+          </View>
+        </View>
       </View>
     )
   }
