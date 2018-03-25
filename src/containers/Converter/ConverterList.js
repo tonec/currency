@@ -27,6 +27,8 @@ class ConverterList extends Component {
     const crossRate = item.rate / baseRate
     const value = (item.id === baseId) ? baseVolume : crossRate * baseVolume
 
+    console.log('item', item)
+
     return (
       <ConverterListItem
         id={item.id}
@@ -35,6 +37,8 @@ class ConverterList extends Component {
         value={value.toFixed(item.decimal_digit)}
         rounding={item.rounding}
         symbolNative={item.symbol_native}
+        currencyCode={item.currency_code}
+        countryCode={item.country_code}
         onPressItem={this._onPressItem}
         handleOnValueInputChange={handleOnValueInputChange}
       />

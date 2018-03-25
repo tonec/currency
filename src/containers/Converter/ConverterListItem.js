@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { View, Text, TextInput, Image } from 'react-native'
 import { isNumber } from '../../utils'
-import { View, Text, TextInput } from 'react-native'
+import * as flags from '../../components/Flags/Flags'
 
 import styles from './styles'
 
@@ -10,6 +11,8 @@ class ConverterListItem extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
+    currencyCode: PropTypes.string.isRequired,
+    countryCode: PropTypes.string.isRequired,
     rate: PropTypes.number.isRequired,
     value: PropTypes.string.isRequired,
     handleOnValueInputChange: PropTypes.func.isRequired
@@ -49,12 +52,19 @@ class ConverterListItem extends Component {
   }
 
   render () {
-    const { name } = this.props
+    const { name, currencyCode, countryCode } = this.props
     const { tempValue } = this.state
+
+    console.log('countryCode', countryCode)
 
     return (
       <View style={styles.listItem}>
-        <Text style={styles.listItemText}>{name}</Text>
+        <Image
+          width={50}
+          height={30}
+          source={flags[countryCode.toLowerCase()]}
+        />
+        <Text style={styles.listItemText}>{name} ({currencyCode})</Text>
         <TextInput
           style={styles.input}
           keyboardType="numeric"
