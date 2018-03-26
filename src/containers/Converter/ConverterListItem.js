@@ -57,8 +57,8 @@ class ConverterListItem extends Component {
 
     return (
       <View style={styles.listItem}>
-        <View style={styles.wrapCode}>
-          <Text style={styles.code}>{currencyCode}</Text>
+        <View style={styles.wrapSymbol}>
+          <Text style={styles.symbol}>{symbolNative}</Text>
         </View>
         <View style={styles.wrapInput}>
           <TextInput
@@ -70,8 +70,8 @@ class ConverterListItem extends Component {
             onBlur={this.handleOnInputBlur}
           />
         </View>
-        <View style={styles.wrapSymbol}>
-          <Text style={styles.symbol}>{symbolNative}</Text>
+        <View style={styles.wrapCode}>
+          <Text style={styles.code}>{currencyCode}</Text>
         </View>
         <View style={styles.wrapFlag}>
           <Image

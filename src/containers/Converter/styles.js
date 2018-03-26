@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     paddingBottom: 10
   },
 
-  wrapCode: {
-    flex: 1.5,
+  wrapSymbol: {
+    flex: 1,
     backgroundColor: 'transparent'
   },
 
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     flex: 5
   },
 
-  wrapSymbol: {
-    flex: 1,
+  wrapCode: {
+    flex: 1.5,
     backgroundColor: 'transparent'
   },
 
@@ -37,13 +37,11 @@ const styles = StyleSheet.create({
     flex: 1
   },
 
-  code: {
+  symbol: {
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginLeft: 10,
-    marginRight: 10
+    textAlign: 'center'
   },
 
   input: {
@@ -57,11 +55,13 @@ const styles = StyleSheet.create({
     textAlign: 'right'
   },
 
-  symbol: {
+  code: {
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginLeft: 10,
+    marginRight: 10
   },
 
   flag: {
