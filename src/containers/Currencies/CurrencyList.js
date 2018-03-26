@@ -26,6 +26,7 @@ class CurrencyList extends Component {
     <CurrencyListItem
       id={item.id}
       name={item.name}
+      countryCode={item.country_code}
       isSelected={this.isSelected(item.id)}
       onPressItem={this._onPressItem}
       onCurrencyListChange={this.props.onCurrencyListChange}

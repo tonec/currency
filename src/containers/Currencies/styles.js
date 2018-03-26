@@ -2,32 +2,57 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
 
-  container: {
-    backgroundColor: '#1a1a1a'
-  },
-
   list: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
   },
 
-  listItem: {
-    paddingTop: 4,
-    paddingBottom: 4,
-    paddingLeft: 10,
-    paddingRight: 10
+  touchable: {
+    display: 'flex',
+    flexDirection: 'row',
+    borderBottomColor: '#bbb',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 10,
+    paddingBottom: 10
   },
 
-  listItemText: {
-    color: '#fff'
+  wrapIcon: {
+    flex: 1,
+    backgroundColor: 'transparent'
   },
 
-  input: {
+  wrapText: {
+    flex: 5
+  },
+
+  wrapFlag: {
+    flex: 1,
+    backgroundColor: 'transparent'
+  },
+
+  icon: {
     color: '#fff',
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: 'transparent'
+  },
+
+  text: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
+    backgroundColor: 'transparent'
+  },
+
+  flag: {
+    borderRadius: 15,
+    opacity: 0.5,
+    borderColor: '#fff',
+    borderWidth: 2
   }
 })
 

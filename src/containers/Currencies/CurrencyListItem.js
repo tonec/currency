@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
+import * as flags from '../../components/Flags/Flags'
 
 import styles from './styles'
 
@@ -10,6 +11,7 @@ class CurrencyListItem extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
+    countryCode: PropTypes.string.isRequired,
     isSelected: PropTypes.bool.isRequired,
     onCurrencyListChange: PropTypes.func.isRequired
   }
@@ -20,13 +22,33 @@ class CurrencyListItem extends Component {
   }
 
   render () {
-    const { name, isSelected } = this.props
+    const { name, countryCode, isSelected } = this.props
 
     return (
       <View style={styles.listItem}>
-        <TouchableOpacity onPress={this.handleOnPress}>
-          <Icon name={isSelected ? 'md-checkbox-outline' : 'md-square-outline'} size={30} color="#fff" />
-          <Text style={styles.listItemText}>{name}</Text>
+        <TouchableOpacity
+          style={styles.touchable}
+          onPress={this.handleOnPress}
+        >
+          <View style={styles.wrapIcon}>
+            <Icon
+              style={styles.icon}
+              size={30}
+              name={isSelected ? 'md-checkbox-outline' : 'md-square-outline'}
+            />
+          </View>
+          <View style={styles.wrapText}>
+            <Text style={styles.text}>{name}</Text>
+          </View>
+          <View style={styles.wrapFlag}>
+            <Image
+              style={styles.flag}
+              width={30}
+              height={30}
+              resizeMode={'cover'}
+              source={flags[countryCode.toLowerCase()]}
+            />
+          </View>
         </TouchableOpacity>
       </View>
     )
