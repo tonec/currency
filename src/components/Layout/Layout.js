@@ -6,6 +6,16 @@ import { ProgressBar } from '../../components'
 
 import styles from './styles'
 
+const navigatorStyle = {
+  navBarBackgroundColor: '#617bad',
+  navBarTranslucent: true,
+  drawUnderNavBar: true,
+  navBarTextColor: 'white',
+  navBarButtonColor: 'white',
+  statusBarTextColorScheme: 'light',
+  drawUnderTabBar: true
+}
+
 class Layout extends Component {
 
   static propTypes = {
@@ -46,6 +56,7 @@ class Layout extends Component {
       navigator.showModal({
         screen: 'currency.Currencies',
         title: 'Choose currencies',
+        navigatorStyle,
         navigatorButtons: {
           rightButtons: [{
             id: 'close',
