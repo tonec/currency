@@ -10,9 +10,9 @@ class ConverterListItem extends Component {
 
   static propTypes = {
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
     currencyCode: PropTypes.string.isRequired,
     countryCode: PropTypes.string.isRequired,
+    symbolNative: PropTypes.string.isRequired,
     rate: PropTypes.number.isRequired,
     value: PropTypes.string.isRequired,
     handleOnValueInputChange: PropTypes.func.isRequired
@@ -52,37 +52,35 @@ class ConverterListItem extends Component {
   }
 
   render () {
-    const { name, currencyCode, countryCode } = this.props
+    const { currencyCode, countryCode, symbolNative } = this.props
     const { tempValue } = this.state
 
     return (
       <View style={styles.listItem}>
-        <View style={styles.currencyTitle}>
-          <Text style={styles.listItemText}>{name}</Text>
+        <View style={styles.wrapCode}>
+          <Text style={styles.code}>{currencyCode}</Text>
         </View>
-        <View style={styles.currencyContainer}>
-          <View style={styles.listItemElementFlag}>
-            <Image
-              style={styles.flag}
-              width={40}
-              height={40}
-              resizeMode={'contain'}
-              source={flags[countryCode.toLowerCase()]}
-            />
-          </View>
-          <View style={styles.listItemElementInput}>
-            <TextInput
-              style={styles.input}
-              keyboardType="numeric"
-              value={tempValue}
-              onFocus={this.handleOnInputFocus}
-              onChangeText={this.handleOnInputChange}
-              onBlur={this.handleOnInputBlur}
-            />
-          </View>
-          <View style={styles.listItemElementText}>
-            <Text style={styles.listItemText}>{currencyCode}</Text>
-          </View>
+        <View style={styles.wrapInput}>
+          <TextInput
+            style={styles.input}
+            keyboardType="numeric"
+            value={tempValue}
+            onFocus={this.handleOnInputFocus}
+            onChangeText={this.handleOnInputChange}
+            onBlur={this.handleOnInputBlur}
+          />
+        </View>
+        <View style={styles.wrapSymbol}>
+          <Text style={styles.symbol}>{symbolNative}</Text>
+        </View>
+        <View style={styles.wrapFlag}>
+          <Image
+            style={styles.flag}
+            width={30}
+            height={30}
+            resizeMode={'cover'}
+            source={flags[countryCode.toLowerCase()]}
+          />
         </View>
       </View>
     )

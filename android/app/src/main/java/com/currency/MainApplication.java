@@ -6,6 +6,10 @@ import android.support.annotation.NonNull;
 
 import com.facebook.react.ReactApplication;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.horcrux.svg.SvgPackage;
+import com.reactnativenavigation.NavigationReactPackage;
+import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -30,6 +34,10 @@ public class MainApplication extends NavigationApplication {
   //   protected List<ReactPackage> getPackages() {
   //     return Arrays.<ReactPackage>asList(
   //         new MainReactPackage(),
+            new VectorIconsPackage(),
+            new SvgPackage(),
+            new NavigationReactPackage(),
+            new ReactNativeConfigPackage(),
   //     );
   //   }
   // };

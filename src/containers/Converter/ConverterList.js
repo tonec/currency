@@ -27,8 +27,6 @@ class ConverterList extends Component {
     const crossRate = item.rate / baseRate
     const value = (item.id === baseId) ? baseVolume : crossRate * baseVolume
 
-    console.log('item', item)
-
     return (
       <ConverterListItem
         id={item.id}

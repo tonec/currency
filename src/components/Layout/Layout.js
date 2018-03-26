@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import { ScrollView, View } from 'react-native'
+import LinearGradient from 'react-native-linear-gradient'
 import { iconsMap } from '../../utils/icons'
 import { ProgressBar } from '../../components'
 
@@ -68,9 +69,11 @@ class Layout extends Component {
     }
 
     return (
-      <ScrollView style={styles.container} >
-        {this.props.children}
-      </ScrollView>
+      <LinearGradient colors={['#91a4ca', '#91a4ca', '#8697BA']} style={styles.linearGradient}>
+        <ScrollView style={styles.container}>
+          {this.props.children}
+        </ScrollView>
+      </LinearGradient>
     )
   }
 }
