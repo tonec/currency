@@ -3,7 +3,8 @@ import _get from 'lodash/get'
 import _sortBy from 'lodash/sortBy'
 
 export const getRates = state => {
-  return _get(state, 'rates.visible') && state.rates.visible.map(id => state.entities.rates[id])
+  const result = _get(state, 'rates.visible') && state.rates.visible.map(id => state.entities.rates[id])
+  return _sortBy(result, o => o.name)
 }
 
 export const getSelected = state => {
