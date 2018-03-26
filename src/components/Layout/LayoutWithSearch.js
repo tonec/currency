@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react'
-import { ScrollView, View, Text } from 'react-native'
+import { ScrollView, View, TextInput } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
+import Icon from 'react-native-vector-icons/Ionicons'
 import { iconsMap } from '../../utils/icons'
 import { ProgressBar } from '../../components'
 
@@ -8,8 +9,8 @@ import styles from './styles'
 
 const navigatorStyle = {
   navBarBackgroundColor: '#617bad',
-  navBarTranslucent: true,
-  drawUnderNavBar: true,
+  navBarTranslucent: false,
+  drawUnderNavBar: false,
   navBarTextColor: 'white',
   navBarButtonColor: 'white',
   statusBarTextColorScheme: 'light',
@@ -81,6 +82,20 @@ class Layout extends Component {
 
     return (
       <LinearGradient colors={['#91a4ca', '#91a4ca', '#8697BA']} style={styles.linearGradient}>
+        <View style={styles.wrapSearch}>
+          <TextInput
+            style={styles.input}
+            placeholder="Filter currencies"
+            onFocus={this.handleOnInputFocus}
+            onChangeText={this.handleOnInputChange}
+            onBlur={this.handleOnInputBlur}
+          />
+          <Icon
+            style={styles.icon}
+            size={30}
+            name="ios-search"
+          />
+        </View>
         <ScrollView style={styles.container}>
           {this.props.children}
         </ScrollView>

@@ -11,9 +11,9 @@ import configureStore from './redux/configureStore'
 const store = configureStore()
 
 const navigatorStyle = {
-  navBarBackgroundColor: '#617bad',
-  navBarTranslucent: true,
-  drawUnderNavBar: true,
+  navBarBackgroundColor: '#6e8ab8',
+  navBarTranslucent: false,
+  drawUnderNavBar: false,
   navBarTextColor: 'white',
   navBarButtonColor: 'white',
   statusBarTextColorScheme: 'light',
@@ -55,7 +55,8 @@ class App extends Component {
         tabsStyle: {
           tabBarButtonColor: 'white',
           tabBarSelectedButtonColor: 'white',
-          tabBarBackgroundColor: '#617bad'
+          tabBarBackgroundColor: '#6e8ab8',
+          navBarTranslucent: false
         }
       })
     })

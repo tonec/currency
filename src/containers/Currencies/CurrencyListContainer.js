@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSelected } from '../../redux/modules/rates/actions'
 import { getRates, getSelected } from '../../redux/modules/rates/selectors'
-import { Layout } from '../../components'
+import { LayoutWithSearch } from '../../components'
 import CurrencyList from './CurrencyList'
 
 class CurrencyListContainer extends Component {
@@ -28,13 +28,13 @@ class CurrencyListContainer extends Component {
     const { navigator, rates, selected } = this.props
 
     return (
-      <Layout navigator={navigator}>
+      <LayoutWithSearch navigator={navigator}>
         <CurrencyList
           rates={rates}
           selected={selected}
           onCurrencyListChange={this.handleCurrencyListChange}
         />
-      </Layout>
+      </LayoutWithSearch>
     )
   }
 }
