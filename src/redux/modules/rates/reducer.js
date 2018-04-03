@@ -2,6 +2,7 @@ import * as types from './actions'
 
 export const initialState = {
   fetching: false,
+  filterText: '',
   selected: []
 }
 
@@ -20,6 +21,9 @@ export default function reducer (state = initialState, action = {}) {
 
     case types.FETCH_FAIL:
       return { ...state, fetching: false }
+
+    case types.UPDATE_FILTER:
+      return { ...state, filterText: action.payload }
 
     case types.UPDATE_SELECTED:
       if (state.selected.includes(action.payload)) {

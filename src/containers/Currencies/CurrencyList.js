@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View, FlatList } from 'react-native'
+import { Text, View } from 'react-native'
+import AtoZList from 'react-native-alphabetlistview'
 import CurrencyListItem from './CurrencyListItem'
 
 import styles from './styles'
@@ -8,7 +9,7 @@ import styles from './styles'
 class CurrencyList extends Component {
 
   static propTypes = {
-    rates: PropTypes.array,
+    rates: PropTypes.object.isRequired,
     selected: PropTypes.array,
     onCurrencyListChange: PropTypes.func.isRequired
   }
@@ -22,28 +23,38 @@ class CurrencyList extends Component {
 
   keyExtractor = (item, index) => item.id
 
-  renderItem = ({ item }) => (
-    <CurrencyListItem
-      id={item.id}
-      name={item.name}
-      countryCode={item.country_code}
-      isSelected={this.isSelected(item.id)}
-      onPressItem={this._onPressItem}
-      onCurrencyListChange={this.props.onCurrencyListChange}
-    />
-  )
+  renderSectionHeader = ({ title }) => {
+    return (
+      <View>
+        <Text>{title}</Text>
+      </View>
+    )
+  }
+
+  renderItem = ({ item }) => {
+    return (
+      <CurrencyListItem
+        id={item.id}
+        name={item.name}
+        countryCode={item.country_code}
+        isSelected={this.isSelected(item.id)}
+        onPressItem={this._onPressItem}
+        onCurrencyListChange={this.props.onCurrencyListChange}
+      />
+    )
+  }
 
   render () {
+    const { rates } = this.props
+
     return (
-      <View style={styles.container}>
-        <View style={styles.list}>
-          <FlatList
-            data={this.props.rates}
-            keyExtractor={this.keyExtractor}
-            renderItem={this.renderItem}
-          />
-        </View>
-      </View>
+      <AtoZList
+        data={rates}
+        cell={this.renderItem}
+        cellHeight={30}
+        sectionHeader={this.renderSectionHeader}
+        sectionHeaderHeight={22.5}
+      />
     )
   }
 }

@@ -21,7 +21,9 @@ class Layout extends Component {
 
   static propTypes = {
     navigator: PropTypes.object.isRequired,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    filterText: PropTypes.string.isRequired,
+    onSearchChange: PropTypes.func.isRequired
   }
 
   constructor (props) {
@@ -85,9 +87,10 @@ class Layout extends Component {
         <View style={styles.wrapSearch}>
           <TextInput
             style={styles.input}
+            value={this.props.filterText}
             placeholder="Filter currencies"
             onFocus={this.handleOnInputFocus}
-            onChangeText={this.handleOnInputChange}
+            onChangeText={this.props.onSearchChange}
             onBlur={this.handleOnInputBlur}
           />
           <Icon
@@ -96,9 +99,9 @@ class Layout extends Component {
             name="ios-search"
           />
         </View>
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
           {this.props.children}
-        </ScrollView>
+        </View>
       </LinearGradient>
     )
   }

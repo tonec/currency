@@ -11,6 +11,7 @@ export const FETCH = `${prefix}/FETCH`
 export const FETCH_SUCCESS = `${prefix}/FETCH_SUCCESS`
 export const FETCH_FAIL = `${prefix}/FETCH_FAIL`
 
+export const UPDATE_FILTER = `${prefix}/UPDATE_FILTER`
 export const UPDATE_SELECTED = `${prefix}/UPDATE_SELECTED`
 
 /*
@@ -30,6 +31,11 @@ export const fetchRates = () => {
     }
   }
 }
+
+export const updateFilter = filterText => ({
+  type: UPDATE_FILTER,
+  payload: filterText
+})
 
 export const updateSelected = id => ({
   type: UPDATE_SELECTED,

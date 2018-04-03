@@ -19,6 +19,16 @@ const styles = StyleSheet.create({
     paddingBottom: 10
   },
 
+  alphabetSidebar: {
+    position: 'absolute',
+    backgroundColor: 'transparent',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   wrapIcon: {
     flex: 1,
     backgroundColor: 'transparent'
