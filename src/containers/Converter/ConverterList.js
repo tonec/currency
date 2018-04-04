@@ -25,14 +25,14 @@ class ConverterList extends Component {
     const { baseId, baseRate, baseVolume, handleOnValueInputChange } = this.props
 
     const crossRate = item.rate / baseRate
-    const value = (item.id === baseId) ? baseVolume : crossRate * baseVolume
+    const value = (item.id === baseId) ? baseVolume : (crossRate * baseVolume).toFixed(item.decimal_digits)
 
     return (
       <ConverterListItem
         id={item.id}
         name={item.name}
         rate={item.rate}
-        value={value.toFixed(item.decimal_digit)}
+        value={value.toString()}
         rounding={item.rounding}
         symbolNative={item.symbol_native}
         currencyCode={item.currency_code}
