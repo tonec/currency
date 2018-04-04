@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Text, View } from 'react-native'
-import AtoZList from 'react-native-alphabetlistview'
+import AtoZList from '../../components/AtoZList'
 import CurrencyListItem from './CurrencyListItem'
 
 import styles from './styles'
@@ -25,8 +25,8 @@ class CurrencyList extends Component {
 
   renderSectionHeader = ({ title }) => {
     return (
-      <View>
-        <Text>{title}</Text>
+      <View style={styles.sectionHeader}>
+        <Text style={styles.sectionHeaderText}>{title}</Text>
       </View>
     )
   }
@@ -51,9 +51,9 @@ class CurrencyList extends Component {
       <AtoZList
         data={rates}
         cell={this.renderItem}
-        cellHeight={30}
+        cellHeight={54}
         sectionHeader={this.renderSectionHeader}
-        sectionHeaderHeight={22.5}
+        sectionHeaderHeight={42}
       />
     )
   }

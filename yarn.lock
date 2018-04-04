@@ -3873,12 +3873,6 @@ react-devtools-core@^2.0.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-alphabetlistview@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-alphabetlistview/-/react-native-alphabetlistview-0.2.0.tgz#471879c0d205ec6acfd9964bcf3a5eb7bf7fc445"
-  dependencies:
-    merge "^1.2.0"
-
 react-native-config@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.3.1.tgz#981d98eee2c4e467397cd9306f5b6958c501c6e8"

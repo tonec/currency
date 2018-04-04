@@ -8,6 +8,26 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
+  sectionHeader: {
+    height: 42,
+    backgroundColor: '#6e8ab8',
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
+
+  sectionHeaderText: {
+    backgroundColor: 'transparent',
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 16
+  },
+
+  listItem: {
+    height: 54
+  },
+
   touchable: {
     display: 'flex',
     flexDirection: 'row',
@@ -17,16 +37,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 10,
     paddingBottom: 10
-  },
-
-  alphabetSidebar: {
-    position: 'absolute',
-    backgroundColor: 'transparent',
-    top: 0,
-    bottom: 0,
-    right: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 
   wrapIcon: {
