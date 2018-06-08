@@ -1,17 +1,16 @@
 import React, { PropTypes, Component } from 'react'
-import { ScrollView, View, Text } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient'
+import { ScrollView, View } from 'react-native'
 import { iconsMap } from '../../utils/icons'
 import { ProgressBar } from '../../components'
 
 import styles from './styles'
 
 const navigatorStyle = {
-  navBarBackgroundColor: '#617bad',
+  navBarBackgroundColor: '#fff',
   navBarTranslucent: true,
   drawUnderNavBar: true,
-  navBarTextColor: 'white',
-  navBarButtonColor: 'white',
+  navBarTextColor: '#8c8d99',
+  navBarButtonColor: '#8c8d99',
   statusBarTextColorScheme: 'light',
   drawUnderTabBar: true
 }
@@ -80,11 +79,9 @@ class Layout extends Component {
     }
 
     return (
-      <LinearGradient colors={['#91a4ca', '#91a4ca', '#8697BA']} style={styles.linearGradient}>
-        <ScrollView style={styles.container}>
-          {this.props.children}
-        </ScrollView>
-      </LinearGradient>
+      <ScrollView style={styles.container}>
+        {this.props.children}
+      </ScrollView>
     )
   }
 }

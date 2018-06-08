@@ -51,9 +51,9 @@ class CurrencyList extends Component {
       <AtoZList
         data={rates}
         cell={this.renderItem}
-        cellHeight={54}
+        cellHeight={46}
         sectionHeader={this.renderSectionHeader}
-        sectionHeaderHeight={42}
+        sectionHeaderHeight={26}
       />
     )
   }

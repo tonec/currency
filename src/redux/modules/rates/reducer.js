@@ -3,6 +3,7 @@ import * as types from './actions'
 export const initialState = {
   fetching: false,
   filterText: '',
+  visibleRates: [],
   selected: []
 }
 
@@ -16,7 +17,7 @@ export default function reducer (state = initialState, action = {}) {
       return {
         ...state,
         fetching: false,
-        visible: action.response.result
+        visibleRates: action.response.result
       }
 
     case types.FETCH_FAIL:

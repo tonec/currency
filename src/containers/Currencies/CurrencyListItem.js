@@ -30,16 +30,6 @@ class CurrencyListItem extends Component {
           style={styles.touchable}
           onPress={this.handleOnPress}
         >
-          <View style={styles.wrapIcon}>
-            <Icon
-              style={styles.icon}
-              size={30}
-              name={isSelected ? 'md-checkbox-outline' : 'md-square-outline'}
-            />
-          </View>
-          <View style={styles.wrapText}>
-            <Text style={styles.text}>{name}</Text>
-          </View>
           <View style={styles.wrapFlag}>
             <Image
               style={styles.flag}
@@ -47,6 +37,16 @@ class CurrencyListItem extends Component {
               height={30}
               resizeMode={'cover'}
               source={flags[countryCode.toLowerCase()]}
+            />
+          </View>
+          <View style={styles.wrapText}>
+            <Text style={styles.text}>{name}</Text>
+          </View>
+          <View style={styles.wrapIcon}>
+            <Icon
+              style={styles.icon}
+              size={30}
+              name={isSelected ? 'md-checkbox-outline' : 'md-square-outline'}
             />
           </View>
         </TouchableOpacity>

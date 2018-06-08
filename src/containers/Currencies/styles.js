@@ -9,37 +9,36 @@ const styles = StyleSheet.create({
   },
 
   sectionHeader: {
-    height: 42,
-    backgroundColor: '#6e8ab8',
-    paddingTop: 10,
-    paddingBottom: 10,
+    height: 26,
+    paddingTop: 4,
     paddingLeft: 20,
-    paddingRight: 20,
+    paddingRight: 20
   },
 
   sectionHeaderText: {
     backgroundColor: 'transparent',
-    color: '#fff',
+    color: '#52B7DD',
     fontWeight: '700',
-    fontSize: 16
+    fontSize: 18,
+    textAlign: 'center'
   },
 
   listItem: {
-    height: 54
+    height: 46
   },
 
   touchable: {
     display: 'flex',
     flexDirection: 'row',
-    borderBottomColor: '#bbb',
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderTopColor: '#fff',
+    borderTopWidth: StyleSheet.hairlineWidth,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 10,
-    paddingBottom: 10
+    paddingTop: 8,
+    paddingBottom: 8
   },
 
-  wrapIcon: {
+  wrapFlag: {
     flex: 1,
     backgroundColor: 'transparent'
   },
@@ -48,31 +47,32 @@ const styles = StyleSheet.create({
     flex: 5
   },
 
-  wrapFlag: {
+  wrapIcon: {
     flex: 1,
-    backgroundColor: 'transparent'
-  },
-
-  icon: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    backgroundColor: 'transparent'
-  },
-
-  text: {
-    color: '#fff',
-    fontSize: 14,
-    fontWeight: 'bold',
     backgroundColor: 'transparent'
   },
 
   flag: {
     borderRadius: 15,
-    opacity: 0.5,
+    opacity: 0.8,
+    marginLeft: 10,
     borderColor: '#fff',
-    borderWidth: 2
+    borderWidth: 2,
+  },
+
+  text: {
+    color: '#1e1e1e',
+    fontSize: 14,
+    fontWeight: 'bold',
+    backgroundColor: 'transparent'
+  },
+
+  icon: {
+    color: '#1e1e1e',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    backgroundColor: 'transparent'
   }
 })
 

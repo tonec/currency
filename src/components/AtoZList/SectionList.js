@@ -125,21 +125,21 @@ export default class SectionList extends Component {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    backgroundColor: 'transparent',
     alignItems: 'flex-start',
     justifyContent: 'center',
-    right: 5,
+    right: 0,
     top: 0,
     bottom: 0
   },
 
   item: {
-    padding: 0,
+    paddingLeft: 10,
+    paddingRight: 5
   },
 
   text: {
     fontWeight: '700',
-    color: '#fff'
+    color: '#52B7DD'
   },
 
   inactivetext: {

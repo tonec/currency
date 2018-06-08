@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import { ScrollView, View, TextInput } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient'
+import { View, TextInput } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { iconsMap } from '../../utils/icons'
 import { ProgressBar } from '../../components'
@@ -8,13 +7,13 @@ import { ProgressBar } from '../../components'
 import styles from './styles'
 
 const navigatorStyle = {
-  navBarBackgroundColor: '#617bad',
-  navBarTranslucent: false,
+  navBarBackgroundColor: '#fff',
+  navBarTranslucent: true,
   drawUnderNavBar: false,
-  navBarTextColor: 'white',
-  navBarButtonColor: 'white',
+  navBarTextColor: '#8c8d99',
+  navBarButtonColor: '#8c8d99',
   statusBarTextColorScheme: 'light',
-  drawUnderTabBar: true
+  drawUnderTabBar: false
 }
 
 class Layout extends Component {
@@ -83,26 +82,28 @@ class Layout extends Component {
     }
 
     return (
-      <LinearGradient colors={['#91a4ca', '#91a4ca', '#8697BA']} style={styles.linearGradient}>
+      <View style={styles.container}>
         <View style={styles.wrapSearch}>
-          <TextInput
-            style={styles.input}
-            value={this.props.filterText}
-            placeholder="Filter currencies"
-            onFocus={this.handleOnInputFocus}
-            onChangeText={this.props.onSearchChange}
-            onBlur={this.handleOnInputBlur}
-          />
-          <Icon
-            style={styles.icon}
-            size={30}
-            name="ios-search"
-          />
+          <View style={styles.wrapSearchInner}>
+            <TextInput
+              style={styles.input}
+              value={this.props.filterText}
+              placeholder="Filter currencies"
+              onFocus={this.handleOnInputFocus}
+              onChangeText={this.props.onSearchChange}
+              onBlur={this.handleOnInputBlur}
+            />
+            <Icon
+              style={styles.icon}
+              size={30}
+              name="ios-search"
+            />
+          </View>
         </View>
         <View style={styles.container}>
           {this.props.children}
         </View>
-      </LinearGradient>
+      </View>
     )
   }
 }

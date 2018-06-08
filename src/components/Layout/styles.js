@@ -18,24 +18,36 @@ const styles = StyleSheet.create({
   },
 
   wrapSearch: {
-    height: 120,
-    padding: 20,
-    backgroundColor: '#7486ad'
+    marginTop: 64,
+    zIndex: 10
+  },
+
+  wrapSearchInner: {
+    paddingLeft: 20,
+    paddingRight: 20
   },
 
   input: {
-    marginTop: 55,
-    color: '#bbb',
+    color: '#1e1e1e',
     fontSize: 14,
     backgroundColor: '#fff',
     height: 34,
     padding: 10,
     paddingRight: 50,
-    borderRadius: 10
+    borderRadius: 17,
+    borderColor: '#ececec',
+    borderWidth: StyleSheet.hairlineWidth,
+    shadowColor: '#d1d1d1',
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowRadius: 2,
+    shadowOpacity: 0.2
   },
 
   icon: {
-    color: '#bbb',
+    color: '#1e1e1e',
     backgroundColor: 'transparent',
     position: 'absolute',
     fontSize: 20,

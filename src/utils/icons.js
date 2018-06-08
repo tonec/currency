@@ -1,11 +1,13 @@
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const icons = [
-  { name: 'ios-film-outline', size: 30 },
-  { name: 'ios-film', size: 30 },
+  { name: 'logo-usd', size: 25 },
   { name: 'ios-search', size: 30 },
   { name: 'ios-close', size: 30 },
-  { name: 'ios-add', size: 30 }
+  { name: 'ios-add', size: 30 },
+  { name: 'md-globe', size: 30 },
+  { name: 'md-document', size: 30 },
+  { name: 'md-person', size: 30 }
 ]
 
 const iconsMap = {}
