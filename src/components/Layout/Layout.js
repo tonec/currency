@@ -2,17 +2,12 @@ import React, { PropTypes, Component } from 'react'
 import { ScrollView, View } from 'react-native'
 import { iconsMap } from '../../utils/icons'
 import { ProgressBar } from '../../components'
-
+import { colors } from '../../assets/styles/variables'
 import styles from './styles'
 
 const navigatorStyle = {
-  navBarBackgroundColor: '#fff',
-  navBarTranslucent: true,
-  drawUnderNavBar: true,
-  navBarTextColor: '#8c8d99',
-  navBarButtonColor: '#8c8d99',
-  statusBarTextColorScheme: 'light',
-  drawUnderTabBar: true
+  navBarBackgroundColor: colors.brandWhite,
+  navBarButtonColor: colors.brandPrimary
 }
 
 class Layout extends Component {
@@ -25,27 +20,11 @@ class Layout extends Component {
   constructor (props) {
     super(props)
 
-    this.refConColors = {
-      colors: ['#ea0000'],
-      tintColor: '#fff',
-      titleColor: '#fff',
-      progressBackgroundColor: '#fff'
-    }
-
     this.state = {
-      isLoading: false,
-      isRefreshing: false,
-      currencies: [
-        { name: 'USD' },
-        { name: 'GBP' }
-      ]
+      isLoading: false
     }
 
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent)
-  }
-
-  onRefresh = () => {
-    this.setState({ isRefreshing: true })
   }
 
   onNavigatorEvent = (event) => {

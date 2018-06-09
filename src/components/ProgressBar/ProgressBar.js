@@ -1,17 +1,15 @@
 import React from 'react'
-import { View, ActivityIndicator, StyleSheet, Platform } from 'react-native'
+import { View, ActivityIndicator, StyleSheet } from 'react-native'
+import { colors } from '../../assets/styles/variables'
 
 const ProgressBar = () => (
   <View style={styles.progressBar}>
-    <ActivityIndicator size="large" color={Platform.OS === 'ios' ? 'white' : '#EA0000'} />
+    <ActivityIndicator size="large" color={colors.brandPrimary} />
   </View>
 )
 
 const styles = StyleSheet.create({
-  progressBar: {
-    flex: 1,
-    justifyContent: 'center'
-  }
+  progressBar: {}
 })
 
 export default ProgressBar
