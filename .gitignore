@@ -58,3 +58,6 @@ fastlane/screenshots
 .env
 yarn-error.log
 .vscode
+
+# Config
+config.js

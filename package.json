@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "firebase": "^5.0.4",
     "lodash": "^4.16.6",
     "merge": "^1.2.0",
     "moment": "^2.16.0",
@@ -19,6 +20,7 @@
     "react-addons-update": "^15.6.2",
     "react-native": "0.44.0",
     "react-native-config": "^0.3.1",
+    "react-native-gifted-form": "^0.1.1",
     "react-native-linear-gradient": "^2.4.0",
     "react-native-material-ui": "^1.22.3",
     "react-native-navigation": "1.1.84",
