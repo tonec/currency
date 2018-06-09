@@ -2,10 +2,12 @@
   "extends": [
     "standard",
     "standard-react",
-    "plugin:jest/recommended"
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
-  "plugins": ["jest"],
-  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
   "parserOptions": {
     "allowImportExportEverywhere": true
   },
@@ -15,12 +17,12 @@
     "quotes": [2, "single", "avoid-escape"],
     "jsx-quotes": ["error", "prefer-double"],
     "react/jsx-no-bind": [1, {"ignoreRefs": false, "allowArrowFunctions": true, "allowBind": false}],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
     "no-unused-vars": [1],
     "no-return-assign": 0,
     "padded-blocks": 0,
     "prefer-promise-reject-errors": 0
-  },
-  "env": {
-    "jest/globals": true
   }
 }

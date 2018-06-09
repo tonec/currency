@@ -4,4 +4,4 @@ import { firebaseConfig } from './config'
 
 firebase.initializeApp(firebaseConfig)
 
-const app = new App()
+App()
