@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ReactNative, { ListView, StyleSheet, View, NativeModules } from 'react-native'
+import ReactNative, { ListView, View, NativeModules } from 'react-native'
 import SectionHeader from './SectionHeader'
 import SectionList from './SectionList'
 import CellWrapper from './CellWrapper'
+import styles from './styles'
 
 const { UIManager } = NativeModules
 
@@ -284,9 +285,3 @@ export default class SelectableSectionsListView extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  }
-})

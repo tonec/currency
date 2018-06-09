@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { StyleSheet, View, Text, NativeModules } from 'react-native'
+import { View, Text, NativeModules } from 'react-native'
+import styles from './styles'
 
 const { UIManager } = NativeModules
 
@@ -106,7 +107,7 @@ export default class SectionList extends Component {
     })
 
     return (
-      <View style={[styles.container, this.props.style]}>
+      <View style={[styles.sectionListContainer, this.props.style]}>
         <View
           ref="view"
           onStartShouldSetResponder={returnTrue}
@@ -121,29 +122,3 @@ export default class SectionList extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    position: 'absolute',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    right: 0,
-    top: 0,
-    bottom: 0
-  },
-
-  item: {
-    paddingLeft: 10,
-    paddingRight: 5
-  },
-
-  text: {
-    fontWeight: '700',
-    color: '#52B7DD'
-  },
-
-  inactivetext: {
-    fontWeight: '700',
-    color: '#CCCCCC'
-  }
-})

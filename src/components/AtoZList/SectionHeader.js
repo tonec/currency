@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ReactNative, { StyleSheet, View, Text, NativeModules } from 'react-native'
+import ReactNative, { View, Text, NativeModules } from 'react-native'
+import styles from './styles'
 
 const { UIManager } = NativeModules
 
@@ -30,9 +31,3 @@ export default class SectionHeader extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'transparent'
-  }
-})
