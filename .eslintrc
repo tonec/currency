@@ -8,9 +8,7 @@
   "plugins": [
     "react"
   ],
-  "parser": {
-    "babel-eslint"
-  },
+  "parser": "babel-eslint",
   "parserOptions": {
     "allowImportExportEverywhere": true
   },
@@ -23,6 +21,7 @@
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 2,
+    "react/no-deprecated": 0,
     "no-unused-vars": [1],
     "no-return-assign": 0,
     "padded-blocks": 0,
