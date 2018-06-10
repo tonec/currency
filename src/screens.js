@@ -4,6 +4,6 @@ import ConverterListContainer from './containers/Converter/ConverterListContaine
 import CurrencyListContainer from './containers/Currencies/CurrencyListContainer'
 
 export function registerScreens (store, Provider) {
-  Navigation.registerComponent('currency.Conversion', () => ConverterListContainer, store, Provider)
-  Navigation.registerComponent('currency.Currencies', () => CurrencyListContainer, store, Provider)
+  Navigation.registerComponent('viatorem.Conversion', () => ConverterListContainer, store, Provider)
+  Navigation.registerComponent('viatorem.Currencies', () => CurrencyListContainer, store, Provider)
 }

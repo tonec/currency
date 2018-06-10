@@ -13,19 +13,19 @@ export default () => {
       label: 'Trips',
       title: 'Trips',
       icon: iconsMap['md-globe'],
-      screen: 'currency.Conversion',
+      screen: 'viatorem.Conversion',
       navigatorStyle
     }, {
       label: 'Documents',
       title: 'Documents',
       icon: iconsMap['md-document'],
-      screen: 'currency.Conversion',
+      screen: 'viatorem.Conversion',
       navigatorStyle
     }, {
       label: 'Currency',
       title: 'Currency',
       icon: iconsMap['logo-usd'],
-      screen: 'currency.Conversion',
+      screen: 'viatorem.Conversion',
       navigatorStyle,
       navigatorButtons: {
         rightButtons: [
@@ -40,7 +40,7 @@ export default () => {
       label: 'Profile',
       title: 'Profile',
       icon: iconsMap['md-person'],
-      screen: 'currency.Conversion',
+      screen: 'viatorem.Conversion',
       navigatorStyle
     }],
     tabsStyle: {

@@ -32,7 +32,7 @@ class Layout extends Component {
 
     if (event.type === 'NavBarButtonPress' && event.id === 'add') {
       navigator.showModal({
-        screen: 'currency.Currencies',
+        screen: 'viatorem.Currencies',
         title: 'Choose currencies',
         navigatorStyle,
         navigatorButtons: {

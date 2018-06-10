@@ -1,4 +1,4 @@
-package com.currency;
+package com.viatorem;
 
 import android.app.Application;
 import android.util.Log;

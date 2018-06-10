@@ -88,7 +88,7 @@ android {
     buildToolsVersion "25.0.1"
 
     defaultConfig {
-        applicationId "com.currency"
+        applicationId "com.viatorem"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 2

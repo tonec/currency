@@ -1,4 +1,4 @@
-package com.currency;
+package com.viatorem;
 
 // import com.facebook.react.ReactActivity;
 import com.reactnativenavigation.controllers.SplashActivity;
@@ -11,6 +11,6 @@ public class MainActivity extends SplashActivity {
      */
     // @Override
     // protected String getMainComponentName() {
-    //     return "currency";
+    //     return "viatorem";
     // }
 }
