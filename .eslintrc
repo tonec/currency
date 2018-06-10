@@ -8,6 +8,9 @@
   "plugins": [
     "react"
   ],
+  "parser": {
+    "babel-eslint"
+  },
   "parserOptions": {
     "allowImportExportEverywhere": true
   },
