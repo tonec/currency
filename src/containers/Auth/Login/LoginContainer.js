@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import { Heading, Input } from '../../../components'
+import { Heading, Input, Button } from '../../../components'
 import styles from './styles'
 
 class LoginContainer extends Component {
@@ -22,12 +22,16 @@ class LoginContainer extends Component {
           <Input 
             value={this.state.username}
             placeholder="Email address"
-            handleOnChange={(text) => this.setState({ username: text })}
+            handleOnChange={text => this.setState({ username: text })}
           />
           <Input 
             value={this.state.password}
             placeholder="Password"
-            handleOnChange={(text) => this.setState({ password: text })}
+            handleOnChange={text => this.setState({ password: text })}
+          />
+          <Button 
+            value="Sign in"
+            handleOnPress={() => console.log('clicked')}
           />
         </View>
       </View>
