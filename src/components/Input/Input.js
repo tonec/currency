@@ -3,12 +3,13 @@ import { string, func } from 'prop-types'
 import { View, TextInput } from 'react-native'
 import styles from './styles'
 
-const Input = ({ value, handleOnChange }) => {
+const Input = ({ value, placeholder, handleOnChange }) => {
   return (
     <View style={styles.container}>
       <TextInput
         value={value}
         style={styles.input}
+        placeholder={placeholder}
         onChangeText={handleOnChange}
       />
     </View>
@@ -17,11 +18,13 @@ const Input = ({ value, handleOnChange }) => {
 
 Input.propTypes = {
   value: string,
+  placeholder: string,
   handleOnChange: func.isRequired
 }
 
 Input.defaultProps = {
-  value: ''
+  value: '',
+  placeholder: ''
 }
 
 export default Input

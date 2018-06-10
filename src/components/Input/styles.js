@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native'
-import { scale, verticalScale, moderateScale } from '../../assets/styles/scale'
+import { scale } from '../../assets/styles/scale'
 import { colors } from '../../assets/styles/variables'
 
 const { width } = Dimensions.get('window')
@@ -10,15 +10,16 @@ const styles = StyleSheet.create({
     width: width,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: scale(20)
+    paddingHorizontal: scale(20),
+    marginBottom: scale(10)
   },
 
   input: {
     height: scale(40),
     backgroundColor: colors.greyLight,
     color: colors.brandBlack,
-    borderRadius: 20,
-    padding: scale(10)
+    borderRadius: scale(20),
+    paddingHorizontal: scale(20)
   }
 })
 

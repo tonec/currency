@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { View, Text } from 'react-native'
-import { Input } from '../../../components'
+import { View } from 'react-native'
+import { Heading, Input } from '../../../components'
+import styles from './styles'
 
 class LoginContainer extends Component {
 
@@ -16,12 +16,20 @@ class LoginContainer extends Component {
 
   render () {
     return (
-      <View>
-        <Text>Log In</Text>
-        <Input 
-          value={this.state.username}
-          handleOnChange={(text) => this.setState({ username: text })}
-        />
+      <View style={styles.container}>
+        <View style={styles.login}>
+          <Heading h2>Log in</Heading>
+          <Input 
+            value={this.state.username}
+            placeholder="Email address"
+            handleOnChange={(text) => this.setState({ username: text })}
+          />
+          <Input 
+            value={this.state.password}
+            placeholder="Password"
+            handleOnChange={(text) => this.setState({ password: text })}
+          />
+        </View>
       </View>
     )
   }
