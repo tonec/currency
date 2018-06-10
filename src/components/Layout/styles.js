@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
   },
 
   wrapSearch: {
-    marginTop: 64,
     zIndex: 10
   },
 
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     position: 'absolute',
     fontSize: 20,
-    top: 82,
+    top: 6,
     right: 30
   }
 })

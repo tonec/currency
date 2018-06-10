@@ -56,7 +56,7 @@ class Layout extends Component {
   render () {
     const { isLoading } = this.state
 
-    if (true) {
+    if (isLoading) {
       return <View style={styles.progressBar}><ProgressBar /></View>
     }
 

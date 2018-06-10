@@ -48,13 +48,17 @@ class CurrencyList extends Component {
     const { rates } = this.props
 
     return (
-      <AtoZList
-        data={rates}
-        cell={this.renderItem}
-        cellHeight={46}
-        sectionHeader={this.renderSectionHeader}
-        sectionHeaderHeight={26}
-      />
+      <View>
+        <View style={styles.list}>
+          <AtoZList
+            data={rates}
+            cell={this.renderItem}
+            cellHeight={46}
+            sectionHeader={this.renderSectionHeader}
+            sectionHeaderHeight={26}
+          />
+        </View>
+    </View>
     )
   }
 }
