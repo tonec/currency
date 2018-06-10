@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native'
+import { scale, verticalScale, moderateScale } from '../../assets/styles/scale'
+import { colors } from '../../assets/styles/variables'
 
 const styles = StyleSheet.create({
 
@@ -6,8 +8,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: 10,
-    backgroundColor: '#fff'
+    paddingTop: scale(10),
+    backgroundColor: colors.brandWhite
   },
 
   listItem: {
@@ -21,10 +23,10 @@ const styles = StyleSheet.create({
     paddingTop: 2,
     paddingBottom: 2,
     borderRadius: 40,
-    backgroundColor: '#fff',
-    borderColor: '#ececec',
+    backgroundColor: colors.brandWhite,
+    borderColor: colors.greyLight,
     borderWidth: StyleSheet.hairlineWidth,
-    shadowColor: '#d1d1d1',
+    shadowColor: colors.greyMid,
     shadowOffset: {
       width: 0,
       height: 2
@@ -54,13 +56,13 @@ const styles = StyleSheet.create({
   flag: {
     borderRadius: 15,
     opacity: 0.8,
-    borderColor: '#fff',
+    borderColor: colors.brandWhite,
     borderWidth: 2,
     marginLeft: 6
   },
 
   code: {
-    color: '#1e1e1e',
+    color: colors.brandBlack,
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'left',
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    color: '#1e1e1e',
+    color: colors.brandBlack,
     fontSize: 16,
     fontWeight: 'bold',
     height: 36,
@@ -78,7 +80,7 @@ const styles = StyleSheet.create({
   },
 
   symbol: {
-    color: '#1e1e1e',
+    color: colors.brandBlack,
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',

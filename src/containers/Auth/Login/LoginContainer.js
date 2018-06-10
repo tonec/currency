@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View, Text, TextInput } from 'react-native'
+import { View, Text } from 'react-native'
+import { Input } from '../../../components'
 
 class LoginContainer extends Component {
 
@@ -17,10 +18,9 @@ class LoginContainer extends Component {
     return (
       <View>
         <Text>Log In</Text>
-        <TextInput 
+        <Input 
           value={this.state.username}
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-          onChangeText={(text) => this.setState({ username: text })}
+          handleOnChange={(text) => this.setState({ username: text })}
         />
       </View>
     )
