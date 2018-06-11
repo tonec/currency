@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
+import { Single } from '../../../components/Layout'
 import { Heading, Input, Button } from '../../../components'
 import styles from './styles'
 
@@ -16,7 +17,7 @@ class LoginContainer extends Component {
 
   render () {
     return (
-      <View style={styles.container}>
+      <Single>
         <View style={styles.login}>
           <Heading h2>Log in</Heading>
           <Input 
@@ -34,7 +35,7 @@ class LoginContainer extends Component {
             handleOnPress={() => console.log('clicked')}
           />
         </View>
-      </View>
+      </Single>
     )
   }
 }

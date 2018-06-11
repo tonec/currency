@@ -29,7 +29,10 @@ const startAuth = () => {
     Navigation.startSingleScreenApp({
       screen: {
         screen: 'viatorem.Login',
-        title: 'Log In'
+        title: '',
+        navigatorStyle: {
+          navBarNoBorder: true
+        }
       }
     })
   })

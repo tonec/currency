@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateFilter, updateSelected } from '../../redux/modules/rates/actions'
 import { getRatesFiltered, getFilterText, getSelected } from '../../redux/modules/rates/selectors'
-import { ScrollModalWithSearch } from '../../components'
+import { ScrollModalWithSearch } from '../../components/Layout'
 import CurrencyList from './CurrencyList'
 
 class CurrencyListContainer extends Component {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fetchRates } from '../../redux/modules/rates/actions'
 import { getSelectedRates } from '../../redux/modules/rates/selectors'
-import { ScrollModal } from '../../components'
+import { ScrollModal } from '../../components/Layout'
 import ConverterList from './ConverterList'
 
 class ConverterListContainer extends Component {

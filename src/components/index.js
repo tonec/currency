@@ -1,6 +1,4 @@
 export { default as Navigation } from './Navigation/Navigation'
-export { default as ScrollModal } from './Layout/ScrollModal'
-export { default as ScrollModalWithSearch } from './Layout/ScrollModalWithSearch'
 export { default as ProgressBar } from './ProgressBar/ProgressBar'
 export { default as Flags } from './Flags/Flags'
 export { default as Input } from './Input/Input'
