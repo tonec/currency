@@ -23,6 +23,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		177CF96DBB01445F84ECD269 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA0748B92FAD4D0CAF41B014 /* Entypo.ttf */; };
 		27248F331EECD2A9009EAE2A /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27248F321EECD299009EAE2A /* libReactNativeNavigation.a */; };
+		2A37E7A925F0A7A648BF7CEC /* libPods-viatorem-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE918E4FC5D61B4F1A96731E /* libPods-viatorem-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -39,6 +40,7 @@
 		4DB23EB282354F2D937F4A29 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF17A1250B6A4A76B7D7B6BE /* Feather.ttf */; };
 		4EAF077D63AC45EAB45308E7 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D1BE145F26451EA2E8C091 /* libReactNativeConfig.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		6243C7D5B57B42278527ACCA /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF0AE3CA9743DDB9CB509B /* libRNFirebase.a */; };
 		76E0C720364C415186EA642C /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F573BDF1A49F4687AD51BF15 /* Foundation.ttf */; };
 		7D2D131A13F64C7D88B12900 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66CBC86686844491A74F210D /* Ionicons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -48,9 +50,16 @@
 		B8BDD0E0F41648FCA058ED38 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BF3EE266D7488892F42D79 /* MaterialIcons.ttf */; };
 		BB9C1DDA76C64F7BA2591A8C /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF31821C368A4A7D844B4FAD /* EvilIcons.ttf */; };
 		C3F0CF9DE14B456B857C6D7E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 735078C2FBA44E97A9F6B9C8 /* Zocial.ttf */; };
+		CD5E999A45FDA59FAE26BD90 /* libPods-viatorem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C0A4C424767FCCC0E3E463 /* libPods-viatorem.a */; };
+		CF6168903D74350ED2071F27 /* libPods-viatorem-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A16C759D66080CEF832ACE39 /* libPods-viatorem-tvOSTests.a */; };
+		D1C48CC72A26559E42C40BE1 /* libPods-viatoremTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8F33269C41B0656A05D46F /* libPods-viatoremTests.a */; };
 		D2E46A1303DA433F86CEC57E /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE294B63E6254D6BB9410B67 /* SimpleLineIcons.ttf */; };
 		DB9E78C131CE480182C0B177 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2F7ED18FD5A4B5BA30E6698 /* Octicons.ttf */; };
 		E2BD0815722E495E95951170 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B248CA3018149E5B5956980 /* libRNVectorIcons.a */; };
+		EAB6CB7B20CEC57F00DD07EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAB6CB7A20CEC57F00DD07EC /* GoogleService-Info.plist */; };
+		EAB6CB7C20CEC57F00DD07EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAB6CB7A20CEC57F00DD07EC /* GoogleService-Info.plist */; };
+		EAB6CB7D20CEC57F00DD07EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAB6CB7A20CEC57F00DD07EC /* GoogleService-Info.plist */; };
+		EAB6CB7E20CEC57F00DD07EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAB6CB7A20CEC57F00DD07EC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +301,13 @@
 			remoteGlobalIDString = 94DDAC5C1F3D024300EED511;
 			remoteInfo = "RNSVG-tvOS";
 		};
+		EAE112C720CEC8F4007D0346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2D93B15374842FD991DCF21 /* RNFirebase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNFirebase;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -316,10 +332,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = viatorem/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = viatorem/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1E8F33269C41B0656A05D46F /* libPods-viatoremTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-viatoremTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23C0A4C424767FCCC0E3E463 /* libPods-viatorem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-viatorem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2495729ED956456CBD5D4DFB /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
 		27248F141EECD299009EAE2A /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* viatorem-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "viatorem-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* viatorem-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "viatorem-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30733CC82187DAFF5CBCC720 /* Pods-viatorem-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viatorem-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-viatorem-tvOS/Pods-viatorem-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		4486F527828A4B9A93FC367C /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		5B248CA3018149E5B5956980 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
@@ -327,17 +346,29 @@
 		735078C2FBA44E97A9F6B9C8 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7A0EE2AF814C49908480D0E4 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
+		7DE7C689E4BC297EC884322E /* Pods-viatorem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viatorem.release.xcconfig"; path = "Pods/Target Support Files/Pods-viatorem/Pods-viatorem.release.xcconfig"; sourceTree = "<group>"; };
+		7ECB387E8D3DDDCF8FBF9CA7 /* Pods-viatoremTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viatoremTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-viatoremTests/Pods-viatoremTests.release.xcconfig"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		966E7F832AD94EC2B32A9D6A /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		9D0D8B44367B4059A25AAAC7 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		A16C759D66080CEF832ACE39 /* libPods-viatorem-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-viatorem-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F7ED18FD5A4B5BA30E6698 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		A4083DBDEE9D459E876CD25E /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; };
 		AF31821C368A4A7D844B4FAD /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		BF17A1250B6A4A76B7D7B6BE /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		C2BF0AE3CA9743DDB9CB509B /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
+		CB964A5777B4F6F2EE3940F3 /* Pods-viatorem-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viatorem-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viatorem-tvOS/Pods-viatorem-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CC0EF6099F4B179475035BA8 /* Pods-viatorem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viatorem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viatorem/Pods-viatorem.debug.xcconfig"; sourceTree = "<group>"; };
+		CD0562FF4FE05430DFEA24FD /* Pods-viatorem-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viatorem-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-viatorem-tvOSTests/Pods-viatorem-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE918E4FC5D61B4F1A96731E /* libPods-viatorem-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-viatorem-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB96B373A18FAD14AF1169D9 /* Pods-viatoremTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viatoremTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viatoremTests/Pods-viatoremTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE66B6C57EB1478CB93A3E0E /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
 		E6BF3EE266D7488892F42D79 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		EA0748B92FAD4D0CAF41B014 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		EAB6CB7A20CEC57F00DD07EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EAEE029F0FB678D0010C3B47 /* Pods-viatorem-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viatorem-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viatorem-tvOSTests/Pods-viatorem-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F133C8D874914AD6A5B02E8E /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
+		F2D93B15374842FD991DCF21 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		F573BDF1A49F4687AD51BF15 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		FE294B63E6254D6BB9410B67 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -348,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				D1C48CC72A26559E42C40BE1 /* libPods-viatoremTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +403,8 @@
 				B062F3AFDD4A4D9C98D34298 /* libBVLinearGradient.a in Frameworks */,
 				4EAF077D63AC45EAB45308E7 /* libReactNativeConfig.a in Frameworks */,
 				8AA840BD5E8044C283885082 /* libRNSVG.a in Frameworks */,
+				CD5E999A45FDA59FAE26BD90 /* libPods-viatorem.a in Frameworks */,
+				6243C7D5B57B42278527ACCA /* libRNFirebase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +420,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				2A37E7A925F0A7A648BF7CEC /* libPods-viatorem-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +428,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6168903D74350ED2071F27 /* libPods-viatorem-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,9 +512,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		13A17B1EA87F60EC79C15558 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC0EF6099F4B179475035BA8 /* Pods-viatorem.debug.xcconfig */,
+				7DE7C689E4BC297EC884322E /* Pods-viatorem.release.xcconfig */,
+				CB964A5777B4F6F2EE3940F3 /* Pods-viatorem-tvOS.debug.xcconfig */,
+				30733CC82187DAFF5CBCC720 /* Pods-viatorem-tvOS.release.xcconfig */,
+				EAEE029F0FB678D0010C3B47 /* Pods-viatorem-tvOSTests.debug.xcconfig */,
+				CD0562FF4FE05430DFEA24FD /* Pods-viatorem-tvOSTests.release.xcconfig */,
+				DB96B373A18FAD14AF1169D9 /* Pods-viatoremTests.debug.xcconfig */,
+				7ECB387E8D3DDDCF8FBF9CA7 /* Pods-viatoremTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* viatorem */ = {
 			isa = PBXGroup;
 			children = (
+				EAB6CB7A20CEC57F00DD07EC /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -556,6 +608,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		3876C814B836D332802D8A69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23C0A4C424767FCCC0E3E463 /* libPods-viatorem.a */,
+				CE918E4FC5D61B4F1A96731E /* libPods-viatorem-tvOS.a */,
+				A16C759D66080CEF832ACE39 /* libPods-viatorem-tvOSTests.a */,
+				1E8F33269C41B0656A05D46F /* libPods-viatoremTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,6 +656,7 @@
 				966E7F832AD94EC2B32A9D6A /* BVLinearGradient.xcodeproj */,
 				F133C8D874914AD6A5B02E8E /* ReactNativeConfig.xcodeproj */,
 				7A0EE2AF814C49908480D0E4 /* RNSVG.xcodeproj */,
+				F2D93B15374842FD991DCF21 /* RNFirebase.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -615,6 +679,8 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				36903B73C57F421C9ADA2B70 /* Resources */,
 				EAA1DDEA20C7F5780018058C /* Recovered References */,
+				13A17B1EA87F60EC79C15558 /* Pods */,
+				3876C814B836D332802D8A69 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -639,6 +705,7 @@
 				06D1BE145F26451EA2E8C091 /* libReactNativeConfig.a */,
 				2495729ED956456CBD5D4DFB /* libRNSVG.a */,
 				A4083DBDEE9D459E876CD25E /* libRNSVG-tvOS.a */,
+				C2BF0AE3CA9743DDB9CB509B /* libRNFirebase.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -652,6 +719,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EAE112A720CEC8F4007D0346 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAE112C820CEC8F4007D0346 /* libRNFirebase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -659,6 +734,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "viatoremTests" */;
 			buildPhases = (
+				FF35E5B557FEC63308786C8C /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -677,6 +753,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "viatorem" */;
 			buildPhases = (
+				FA6604FF848633A107601256 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
@@ -695,6 +772,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "viatorem-tvOS" */;
 			buildPhases = (
+				FFC26D13ACAF4B8A5C9C9230 /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
@@ -713,6 +791,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "viatorem-tvOSTests" */;
 			buildPhases = (
+				6404CB135970CAA9CA4CA4F1 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -822,6 +901,10 @@
 				{
 					ProductGroup = 27248F151EECD299009EAE2A /* Products */;
 					ProjectRef = 27248F141EECD299009EAE2A /* ReactNativeNavigation.xcodeproj */;
+				},
+				{
+					ProductGroup = EAE112A720CEC8F4007D0346 /* Products */;
+					ProjectRef = F2D93B15374842FD991DCF21 /* RNFirebase.xcodeproj */;
 				},
 				{
 					ProductGroup = EAA1DE0B20C7F57B0018058C /* Products */;
@@ -1067,6 +1150,13 @@
 			remoteRef = EAA1DE1120C7F57C0018058C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		EAE112C820CEC8F4007D0346 /* libRNFirebase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNFirebase.a;
+			remoteRef = EAE112C720CEC8F4007D0346 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1074,6 +1164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB6CB7C20CEC57F00DD07EC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,6 +1174,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				EAB6CB7B20CEC57F00DD07EC /* GoogleService-Info.plist in Resources */,
 				177CF96DBB01445F84ECD269 /* Entypo.ttf in Resources */,
 				BB9C1DDA76C64F7BA2591A8C /* EvilIcons.ttf in Resources */,
 				9EB3312680C84AB38CCAE419 /* FontAwesome.ttf in Resources */,
@@ -1102,6 +1194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				EAB6CB7D20CEC57F00DD07EC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,6 +1202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB6CB7E20CEC57F00DD07EC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1142,6 +1236,78 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+		6404CB135970CAA9CA4CA4F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-viatorem-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA6604FF848633A107601256 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-viatorem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF35E5B557FEC63308786C8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-viatoremTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC26D13ACAF4B8A5C9C9230 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-viatorem-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1210,6 +1376,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB96B373A18FAD14AF1169D9 /* Pods-viatoremTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1224,12 +1391,14 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = viatoremTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1248,6 +1417,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ECB387E8D3DDDCF8FBF9CA7 /* Pods-viatoremTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1261,12 +1431,14 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = viatoremTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1285,6 +1457,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0EF6099F4B179475035BA8 /* Pods-viatorem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1300,6 +1473,7 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = viatorem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1316,6 +1490,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DE7C689E4BC297EC884322E /* Pods-viatorem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1327,6 +1502,7 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = viatorem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1343,6 +1519,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB964A5777B4F6F2EE3940F3 /* Pods-viatorem-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1359,11 +1536,13 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = "viatorem-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1384,6 +1563,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30733CC82187DAFF5CBCC720 /* Pods-viatorem-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1400,11 +1580,13 @@
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = "viatorem-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1425,6 +1607,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAEE029F0FB678D0010C3B47 /* Pods-viatorem-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1443,6 +1626,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.viatorem-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1454,6 +1638,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0562FF4FE05430DFEA24FD /* Pods-viatorem-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1467,6 +1652,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
