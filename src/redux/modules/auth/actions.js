@@ -12,13 +12,19 @@ export const LOGIN_FAIL = `${prefix}/LOGIN_FAIL`
 * Action creators
 * * * * * * * * */
 
-export const login = () => {
+export const login = (credentials) => {
+  const { email, password } = credentials
+
   return {
     types: [ LOGIN, LOGIN_SUCCESS, LOGIN_FAIL ],
-    promise: async ({ client }) => {
+    promise: async ({ firebase }) => {
       try {
-        const { data } = await client.get('/rates')
-        // return normalize(data.rates, ratesListSchema)
+        const { user } = await firebase.auth().signInWithEmailAndPassword(email, password)
+        return {
+          uid: user.uid,
+          username: user.displayName,
+          email: user.email
+        }
       } catch (error) {
         throw error
       }
