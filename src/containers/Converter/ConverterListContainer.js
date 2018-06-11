@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fetchRates } from '../../redux/modules/rates/actions'
 import { getSelectedRates } from '../../redux/modules/rates/selectors'
-import { Layout } from '../../components'
+import { ScrollModal } from '../../components'
 import ConverterList from './ConverterList'
 
 class ConverterListContainer extends Component {
@@ -46,7 +46,7 @@ class ConverterListContainer extends Component {
     const { baseId, baseRate, baseVolume } = this.state
 
     return (
-      <Layout navigator={navigator}>
+      <ScrollModal navigator={navigator}>
         <ConverterList
           currencies={selectesRates}
           baseId={baseId}
@@ -54,7 +54,7 @@ class ConverterListContainer extends Component {
           baseVolume={baseVolume}
           handleOnValueInputChange={this.handleOnValueInputChange}
         />
-      </Layout>
+      </ScrollModal>
     )
   }
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateFilter, updateSelected } from '../../redux/modules/rates/actions'
 import { getRatesFiltered, getFilterText, getSelected } from '../../redux/modules/rates/selectors'
-import { LayoutWithSearch } from '../../components'
+import { ScrollModalWithSearch } from '../../components'
 import CurrencyList from './CurrencyList'
 
 class CurrencyListContainer extends Component {
@@ -34,7 +34,7 @@ class CurrencyListContainer extends Component {
     const { navigator, rates, filterText, selected } = this.props
 
     return (
-      <LayoutWithSearch
+      <ScrollModalWithSearch
         navigator={navigator}
         filterText={filterText}
         onSearchChange={this.handleOnSearchChange}
@@ -44,7 +44,7 @@ class CurrencyListContainer extends Component {
           selected={selected}
           onCurrencyListChange={this.handleCurrencyListChange}
         />
-      </LayoutWithSearch>
+      </ScrollModalWithSearch>
     )
   }
 }
