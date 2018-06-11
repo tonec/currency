@@ -8,13 +8,17 @@ import apiClient from '../utils/apiClient'
 import clientMiddleware from './middleware/clientMiddleware'
 import rootReducer from './rootReducer'
 
-const firebase = firebaseApi.initializeApp(firebaseConfig)
+let firebase
+
+if (!firebaseApi.apps.length) {
+  firebase = firebaseApi.initializeApp(firebaseConfig)
+}
 
 let middleware = [clientMiddleware({ client: apiClient(), firebase })]
 
 const config = {
   key: 'root',
-  storage,
+  storage
 }
 
 const reducer = persistCombineReducers(config, rootReducer)
