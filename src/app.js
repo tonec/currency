@@ -2,6 +2,7 @@ import { Provider } from 'react-redux'
 import { persistStore } from 'redux-persist'
 import { Navigation } from 'react-native-navigation'
 import firebase from 'react-native-firebase'
+import _get from 'lodash/get'
 import configureStore from './redux/configureStore'
 import { registerAuthScreens, registerMainScreens } from './screens'
 import { iconsLoaded } from './utils/icons'
@@ -14,10 +15,9 @@ export const init = async () => {
 
   persistStore(store, null, () => {
 
-    const token = false
-    // const token = await AsyncStorage.removeItem(authToken)
+    const userId = _get(store.getState(), 'auth.user.uid', null)
 
-    if (!token) {
+    if (!userId) {
       startAuth()
     } else {
       startMain()
