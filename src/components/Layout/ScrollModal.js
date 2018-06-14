@@ -1,5 +1,9 @@
 import React, { PropTypes, Component } from 'react'
+import { func } from 'prop-types'
 import { ScrollView, View } from 'react-native'
+import { connect } from 'react-redux'
+import { startAuth } from '../../app'
+import { clearUser } from '../../redux/modules/auth/actions'
 import { iconsMap } from '../../utils/icons'
 import { ProgressBar } from '../../components'
 import { colors } from '../../assets/styles/variables'
@@ -28,7 +32,7 @@ class Layout extends Component {
   }
 
   onNavigatorEvent = (event) => {
-    const { navigator } = this.props
+    const { navigator, clearUser } = this.props
 
     if (event.type === 'NavBarButtonPress' && event.id === 'add') {
       navigator.showModal({
@@ -48,6 +52,11 @@ class Layout extends Component {
     if (event.type === 'NavBarButtonPress' && event.id === 'close') {
       navigator.dismissModal()
     }
+
+    if (event.type === 'NavBarButtonPress' && event.id === 'logout') {
+      clearUser()
+      startAuth()
+    }
   }
 
   render () {
@@ -65,4 +74,10 @@ class Layout extends Component {
   }
 }
 
-export default Layout
+Layout.propTypes = {
+  clearUser: func.isRequired
+}
+
+const mapState = state => ({})
+
+export default connect(mapState, { clearUser })(Layout)

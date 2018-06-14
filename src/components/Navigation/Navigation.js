@@ -30,9 +30,16 @@ export default () => {
       navigatorButtons: {
         rightButtons: [
           {
-            title: 'Add',
             id: 'add',
+            title: 'Add',
             icon: iconsMap['ios-add']
+          }
+        ],
+        leftButtons: [
+          {
+            id: 'logout',
+            title: 'Log out',
+            icon: iconsMap['ios-close']
           }
         ]
       }

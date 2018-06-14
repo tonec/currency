@@ -25,7 +25,7 @@ export const init = async () => {
   })
 }
 
-const startAuth = () => {
+export const startAuth = () => {
   registerAuthScreens(store, Provider)
   Navigation.startSingleScreenApp({
     screen: {
@@ -38,7 +38,7 @@ const startAuth = () => {
   })
 }
 
-const startMain = () => {
+export const startMain = () => {
   registerMainScreens(store, Provider)
   MainNav()
 }

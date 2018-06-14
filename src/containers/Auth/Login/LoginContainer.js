@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { bool, func } from 'prop-types'
+import { bool, func, object } from 'prop-types'
 import { View } from 'react-native'
 import { connect } from 'react-redux'
+import { startMain } from '../../../app'
 import { login } from '../../../redux/modules/auth/actions'
-import { getIsRequesting } from '../../../redux/modules/auth/selectors'
+import { getIsRequesting, getUser } from '../../../redux/modules/auth/selectors'
 import { Single } from '../../../components/Layout'
 import { Heading, Input, Button, ProgressBar } from '../../../components'
 import styles from './styles'
@@ -19,6 +20,12 @@ class LoginContainer extends Component {
     }
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.user) {
+      startMain()
+    } 
+  }
+
   handleOnChangeEmail = text => {
     this.setState({ email: text.trim() })
   }
@@ -32,7 +39,7 @@ class LoginContainer extends Component {
   }
 
   render () {
-    const { isRequesting } = this.props
+    const { isRequesting, user } = this.props
 
     if (isRequesting) {
       return <View style={styles.progressBar}><ProgressBar /></View>
@@ -68,12 +75,18 @@ class LoginContainer extends Component {
 }
 
 const mapState = state => ({
-  isRequesting: getIsRequesting(state)
+  isRequesting: getIsRequesting(state),
+  user: getUser(state)
 })
 
 LoginContainer.propTypes = {
   isRequesting: bool.isRequired,
+  user: object,
   login: func.isRequired
+}
+
+LoginContainer.defaultProps = {
+  user: null
 }
 
 export default connect(mapState, { login })(LoginContainer)

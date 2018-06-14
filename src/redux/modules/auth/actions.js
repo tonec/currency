@@ -8,11 +8,13 @@ export const LOGIN = `${prefix}/LOGIN`
 export const LOGIN_SUCCESS = `${prefix}/LOGIN_SUCCESS`
 export const LOGIN_FAIL = `${prefix}/LOGIN_FAIL`
 
+export const CLEAR_USER = `${prefix}/CLEAR_USER`
+
 /*
 * Action creators
 * * * * * * * * */
 
-export const login = (credentials) => {
+export const login = credentials => {
   const { email, password } = credentials
 
   return {
@@ -25,5 +27,11 @@ export const login = (credentials) => {
         return error
       }
     }
+  }
+}
+
+export const clearUser = () => {
+  return {
+    type: CLEAR_USER
   }
 }
