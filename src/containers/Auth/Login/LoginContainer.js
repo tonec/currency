@@ -39,7 +39,7 @@ class LoginContainer extends Component {
   }
 
   render () {
-    const { isRequesting, user } = this.props
+    const { isRequesting } = this.props
 
     if (isRequesting) {
       return <View style={styles.progressBar}><ProgressBar /></View>
