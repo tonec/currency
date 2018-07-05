@@ -14,7 +14,6 @@ export const init = async () => {
   await iconsLoaded
 
   persistStore(store, null, () => {
-
     const userId = _get(store.getState(), 'auth.user.uid', null)
 
     if (!userId) {
