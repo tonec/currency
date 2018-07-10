@@ -5,8 +5,6 @@ import android.util.Log;
 import android.support.annotation.NonNull;
 
 import com.facebook.react.ReactApplication;
-import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.RNFirebasePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.horcrux.svg.SvgPackage;
 import com.reactnativenavigation.NavigationReactPackage;
@@ -36,8 +34,6 @@ public class MainApplication extends NavigationApplication {
   //   protected List<ReactPackage> getPackages() {
   //     return Arrays.<ReactPackage>asList(
   //         new MainReactPackage(),
-            new RNFirebasePackage(),
-            new RNFirebasePackage(),
             new VectorIconsPackage(),
             new SvgPackage(),
             new NavigationReactPackage(),

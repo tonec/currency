@@ -14,15 +14,11 @@
 #import "ReactNativeConfig.h"
 #import "RCCManager.h"
 
-#import <Firebase.h>
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
-  
-  [FIRApp configure];
 
   // rn-config
   NSDictionary *config = [ReactNativeConfig env];

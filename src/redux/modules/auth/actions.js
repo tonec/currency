@@ -21,10 +21,14 @@ export const login = credentials => {
     types: [ LOGIN, LOGIN_SUCCESS, LOGIN_FAIL ],
     promise: async ({ firebase }) => {
       try {
-        const { _user } = await firebase.auth().signInWithEmailAndPassword(email, password)
-        return _user
+        const { user } = await firebase.auth().signInWithEmailAndPassword(email, password)
+        return {
+          uid: user.uid,
+          username: user.displayName,
+          email: user.email
+        }
       } catch (error) {
-        return error
+        throw error
       }
     }
   }

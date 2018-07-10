@@ -1,12 +1,19 @@
+import { AsyncStorage } from 'react-native'
 import { Provider } from 'react-redux'
 import { persistStore } from 'redux-persist'
 import { Navigation } from 'react-native-navigation'
-import firebase from 'react-native-firebase'
-import _get from 'lodash/get'
+import * as firebaseApi from 'firebase'
+import { firebaseConfig } from '../config'
 import configureStore from './redux/configureStore'
 import { registerAuthScreens, registerMainScreens } from './screens'
 import { iconsLoaded } from './utils/icons'
 import { Navigation as MainNav } from './components'
+
+let firebase
+
+if (!firebaseApi.apps.length) {
+  firebase = firebaseApi.initializeApp(firebaseConfig)
+}
 
 const store = configureStore(firebase)
 
