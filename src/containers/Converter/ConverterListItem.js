@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { View, Text, TextInput, Image } from 'react-native'
 import { isNumber } from '../../utils'
 import * as flags from '../../components/Flags/Flags'
-
 import styles from './styles'
 
 class ConverterListItem extends Component {
