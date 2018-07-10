@@ -28,7 +28,7 @@ export const init = async () => {
     } else {
       startMain()
     }
-  })
+  }) //.purge()
 }
 
 export const startAuth = () => {
