@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
   container: {
     width: width,
     paddingHorizontal: scale(20),
-    marginBottom: scale(10),
+    marginTop: scale(20),
+    marginBottom: scale(10)
   },
 
   button: {
