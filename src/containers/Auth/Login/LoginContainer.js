@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import { startMain } from '../../../app'
 import { login } from '../../../redux/modules/auth/actions'
 import { getIsRequesting, getUser } from '../../../redux/modules/auth/selectors'
-import { Single } from '../../../components/Layout'
-import { Heading, Input, Button, ProgressBar } from '../../../components'
+import { ProgressBar } from '../../../components'
+import Login from './Login'
 import styles from './styles'
 
 class LoginContainer extends Component {
@@ -40,36 +40,20 @@ class LoginContainer extends Component {
 
   render () {
     const { isRequesting } = this.props
+    const { email, password } = this.state
 
     if (isRequesting) {
       return <View style={styles.progressBar}><ProgressBar /></View>
     }
 
     return (
-      <Single>
-        <View style={styles.login}>
-          <Heading h2>Log in</Heading>
-          <Input 
-            autoCorrect={false}
-            autoCapitalize="none"
-            keyboardType="email-address"
-            value={this.state.email}
-            placeholder="Email address"
-            handleOnChange={this.handleOnChangeEmail}
-          />
-          <Input 
-            secureTextEntry
-            autoCapitalize="none"
-            value={this.state.password}
-            placeholder="Password"
-            handleOnChange={this.handleOnChangePassword}
-          />
-          <Button 
-            value="Sign in"
-            handleOnPress={this.handleOnPress}
-          />
-        </View>
-      </Single>
+      <Login
+        email={email}
+        password={password}
+        handleOnChangeEmail={this.handleOnChangeEmail}
+        handleOnChangePassword={this.handleOnChangePassword}
+        handleOnPress={this.handleOnPress}
+      />
     )
   }
 }
