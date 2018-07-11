@@ -20,7 +20,7 @@
     "comma-dangle": 0,
     "quotes": [2, "single", "avoid-escape"],
     "jsx-quotes": ["error", "prefer-double"],
-    "react/jsx-no-bind": [1, {"ignoreRefs": false, "allowArrowFunctions": true, "allowBind": false}],
+    "react/jsx-no-bind": [1, {"ignoreRefs": false, "allowArrowFunctions": true, "allowBind": true}],
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 2,
