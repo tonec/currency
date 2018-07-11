@@ -8,29 +8,30 @@ import styles from './styles'
 const propTypes = {
   email: string.isRequired,
   password: string.isRequired,
-  handleOnChangeEmail: func.isRequired,
-  handleOnChangePassword: func.isRequired,
+  handleOnChange: func.isRequired,
   handleOnPress: func.isRequired
 }
 
-const Login = ({ email, password, handleOnChangeEmail, handleOnChangePassword, handleOnPress }) => (
+const Login = ({ email, password, handleOnChange, handleOnPress }) => (
   <Single>
     <View style={styles.login}>
       <Heading h2>Log in</Heading>
       <Input
+        name="email"
+        value={email}
         autoCorrect={false}
         autoCapitalize="none"
         keyboardType="email-address"
-        value={email}
         placeholder="Email address"
-        handleOnChange={handleOnChangeEmail}
+        handleOnChange={handleOnChange}
       />
       <Input
+        name="password"
+        value={password}
         secureTextEntry
         autoCapitalize="none"
-        value={password}
         placeholder="Password"
-        handleOnChange={handleOnChangePassword}
+        handleOnChange={handleOnChange}
       />
       <Button
         value="Sign in"

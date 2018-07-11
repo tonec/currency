@@ -26,12 +26,8 @@ class LoginContainer extends Component {
     } 
   }
 
-  handleOnChangeEmail = text => {
-    this.setState({ email: text.trim() })
-  }
-
-  handleOnChangePassword = text => {
-    this.setState({ password: text.trim() })
+  handleOnChange = (name, value) => {
+    this.setState({ [name]: value.trim() })
   }
 
   handleOnPress = () => {
@@ -50,8 +46,7 @@ class LoginContainer extends Component {
       <Login
         email={email}
         password={password}
-        handleOnChangeEmail={this.handleOnChangeEmail}
-        handleOnChangePassword={this.handleOnChangePassword}
+        handleOnChange={this.handleOnChange}
         handleOnPress={this.handleOnPress}
       />
     )
